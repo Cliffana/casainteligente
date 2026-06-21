@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}Sobre — {{ site_name }}{% endblock %}
-{% block description %}Saiba mais sobre o {{ site_name }} e o nosso objetivo de ajudar portugueses a criar casas inteligentes.{% endblock %}
+{% block title %}{{ t('about_title') }} — {{ site_name }}{% endblock %}
+{% block description %}{{ t('about_content_1', site_name=site_name) }}{% endblock %}
 
 {% block content %}
 <section class="section">
-    <h1>Sobre Nós</h1>
+    <h1>{{ t('about_title') }}</h1>
     <div class="prose">
-        <p>Bem-vindo ao <strong>{{ site_name }}</strong> — o seu guia de confiança para transformar a sua casa num lar inteligente.</p>
-        <p>Acreditamos que a tecnologia deve simplificar a vida, não complicá-la. Por isso, testamos e reviewmos os melhores produtos de casa inteligente para que possa tomar decisões informadas.</p>
-        <p>Somos apaixonados por automação residencial e partilhamos a nossa experiência real com produtos Amazon Alexa, Google Home, Xiaomi, Aqara, Tuya, e muito mais.</p>
-        <h2>O que oferecemos</h2>
+        <p>{{ t('about_content_1', site_name=site_name) }}</p>
+        <p>{{ t('about_content_2') }}</p>
+        <p>{{ t('about_content_3') }}</p>
+        <h2>{{ t('about_offer_title') }}</h2>
         <ul>
-            <li><strong>Reviews honestas:</strong> Testamos cada produto antes de recomendar</li>
-            <li><strong>Guias completos:</strong> Do básico ao avançado, passo a passo</li>
-            <li><strong>Comparações detalhadas:</strong> Ajude-o a escolher o melhor para si</li>
-            <li><strong>Transparência:</strong> Todos os links de afiliados são identificados</li>
+            <li><strong>{{ t('about_offer_1') }}</strong></li>
+            <li><strong>{{ t('about_offer_2') }}</strong></li>
+            <li><strong>{{ t('about_offer_3') }}</strong></li>
+            <li><strong>{{ t('about_offer_4') }}</strong></li>
         </ul>
     </div>
 </section>

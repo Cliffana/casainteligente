@@ -1,6 +1,6 @@
 @echo off
-cd /d "C:\opencode_file\v2\site-casa-inteligente\output"
-echo Starting server at http://localhost:8006
-echo Press CTRL+C to stop
+echo Starting Casa Inteligente preview server...
+echo Open: http://localhost:8006
+cd /d "%~dp0output"
 python -m http.server 8006
 pause

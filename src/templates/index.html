@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}{{ site_name }} — Guias e Reviews de Casa Inteligente{% endblock %}
-{% block og_title %}{{ site_name }} — Guias e Reviews de Casa Inteligente{% endblock %}
-{% block og_description %}Descubra os melhores produtos para a sua casa inteligente. Guias completos, reviews honestos e comparacoes detalhadas.{% endblock %}
-{% block description %}Descubra os melhores produtos para a sua casa inteligente. Guias completos, reviews honestos e comparacoes detalhadas.{% endblock %}
+{% block title %}{{ site_name }} — {{ t('hero_title') }}{% endblock %}
+{% block og_title %}{{ site_name }} — {{ t('hero_title') }}{% endblock %}
+{% block og_description %}{{ site_description }}{% endblock %}
+{% block description %}{{ site_description }}{% endblock %}
 
 {% block content %}
 <section class="hero">
-    <h1>Casa Inteligente para Todos</h1>
-    <p>Guias, reviews e comparacoes para transformar a sua casa num lar inteligente — desde o basico a automacao avancada.</p>
+    <h1>{{ t('hero_title') }}</h1>
+    <p>{{ t('site_tagline') }}</p>
 </section>
 
 {% if featured_post %}
 <section>
     <article class="card card-featured">
-        <div class="card-badge">Em Destaque</div>
+        <div class="card-badge">{{ t('featured_badge') }}</div>
         <div class="card-image">
             <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -40,10 +40,10 @@
             <h2><a href="{{ featured_post.url }}">{{ featured_post.title }}</a></h2>
             <p class="card-meta">
                 <span>{{ featured_post.date }}</span>
-                <span>{{ featured_post.read_time }} min de leitura</span>
+                <span>{{ featured_post.read_time }} {{ t('minutes') }}</span>
             </p>
             <p>{{ featured_post.excerpt }}</p>
-            <a href="{{ featured_post.url }}" class="btn">Ler artigo</a>
+            <a href="{{ featured_post.url }}" class="btn">{{ t('read_more') }}</a>
         </div>
     </article>
 </section>
@@ -52,8 +52,8 @@
 {% if guides %}
 <section class="section">
     <div class="section-header">
-        <h2>Guias Completos</h2>
-        <a href="/category/guias/" class="section-link">Ver todos →</a>
+        <h2>{{ t('section_guides') }}</h2>
+        <a href="{{ r }}category/guides/" class="section-link">{{ t('section_all') }} →</a>
     </div>
     <div class="grid">
         {% for post in guides %}
@@ -78,10 +78,10 @@
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                 <p class="card-meta">
                     <span>{{ post.date }}</span>
-                    <span>{{ post.read_time }} min</span>
+                    <span>{{ post.read_time }} {{ t('minutes_short') }}</span>
                 </p>
                 <p>{{ post.excerpt }}</p>
-                <a href="{{ post.url }}" class="card-link">Ler mais →</a>
+                <a href="{{ post.url }}" class="card-link">{{ t('read_more') }} →</a>
             </div>
         </article>
         {% endfor %}
@@ -92,8 +92,8 @@
 {% if reviews %}
 <section class="section">
     <div class="section-header">
-        <h2>Reviews</h2>
-        <a href="/category/reviews/" class="section-link">Ver todos →</a>
+        <h2>{{ t('section_reviews') }}</h2>
+        <a href="{{ r }}category/reviews/" class="section-link">{{ t('section_all') }} →</a>
     </div>
     <div class="grid">
         {% for post in reviews %}
@@ -117,10 +117,10 @@
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                 <p class="card-meta">
                     <span>{{ post.date }}</span>
-                    <span>{{ post.read_time }} min</span>
+                    <span>{{ post.read_time }} {{ t('minutes_short') }}</span>
                 </p>
                 <p>{{ post.excerpt }}</p>
-                <a href="{{ post.url }}" class="card-link">Ler review →</a>
+                <a href="{{ post.url }}" class="card-link">{{ t('read_review') }} →</a>
             </div>
         </article>
         {% endfor %}
@@ -131,8 +131,8 @@
 {% if comparisons %}
 <section class="section">
     <div class="section-header">
-        <h2>Comparacoes</h2>
-        <a href="/category/comparacoes/" class="section-link">Ver todos →</a>
+        <h2>{{ t('section_comparisons') }}</h2>
+        <a href="{{ r }}category/comparacoes/" class="section-link">{{ t('section_all') }} →</a>
     </div>
     <div class="grid">
         {% for post in comparisons %}
@@ -155,10 +155,10 @@
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                 <p class="card-meta">
                     <span>{{ post.date }}</span>
-                    <span>{{ post.read_time }} min</span>
+                    <span>{{ post.read_time }} {{ t('minutes_short') }}</span>
                 </p>
                 <p>{{ post.excerpt }}</p>
-                <a href="{{ post.url }}" class="card-link">Ver comparacao →</a>
+                <a href="{{ post.url }}" class="card-link">{{ t('view_comparison') }} →</a>
             </div>
         </article>
         {% endfor %}
@@ -167,11 +167,11 @@
 {% endif %}
 
 <section class="newsletter-section">
-    <h2>Nao perca as melhores promocoes</h2>
-    <p>Receba no seu email as melhores ofertas de casa inteligente, guias exclusivos e comparativas de precos.</p>
-    <form class="newsletter-form" action="mailto:ola@casainteligente.pt" method="post" enctype="text/plain">
-        <input type="email" name="email" placeholder="O seu email" required>
-        <button type="submit" class="btn btn-large">Subscrever Newsletter</button>
+    <h2>{{ t('newsletter_title') }}</h2>
+    <p>{{ t('newsletter_desc') }}</p>
+    <form class="newsletter-form" action="mailto:{{ site_email }}" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="{{ t('newsletter_placeholder') }}" required>
+        <button type="submit" class="btn btn-large">{{ t('newsletter_button') }}</button>
     </form>
 </section>
 {% endblock %}

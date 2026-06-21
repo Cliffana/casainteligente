@@ -1,32 +1,32 @@
 {% extends "base.html" %}
 
 {% block title %}{{ category_name }} — {{ site_name }}{% endblock %}
-{% block description %}Todos os artigos sobre {{ category_name|lower }} de casa inteligente.{% endblock %}
+{% block description %}{{ t('section_description_guides') }}{% endblock %}
 {% block og_title %}{{ category_name }} — {{ site_name }}{% endblock %}
-{% block og_description %}Todos os artigos sobre {{ category_name|lower }} de casa inteligente.{% endblock %}
+{% block og_description %}{{ t('section_description_guides') }}{% endblock %}
 
 {% block content %}
 <section class="section">
     <h1>{{ category_name }}</h1>
-    <p class="section-description">Todos os artigos sobre {{ category_name|lower }}.</p>
+    <p class="section-description">{{ t('section_all') }} {{ category_name|lower }}.</p>
 
     <div class="grid">
         {% for post in posts %}
         <article class="card">
             {% if post.rating %}<div class="card-rating">★ {{ post.rating }}/5</div>{% endif %}
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <p class="card-meta">{{ post.date }} · {{ post.read_time }} min de leitura</p>
+            <p class="card-meta">{{ post.date }} · {{ post.read_time }} {{ t('minutes') }}</p>
             <p>{{ post.excerpt }}</p>
-            <a href="{{ post.url }}" class="card-link">Ler artigo →</a>
+            <a href="{{ post.url }}" class="card-link">{{ t('read_more') }} →</a>
         </article>
         {% endfor %}
     </div>
 
     {% if pages > 1 %}
-    <nav class="pagination" aria-label="Paginação">
-        {% if page > 1 %}<a href="?page={{ page - 1 }}" class="btn">← Anterior</a>{% endif %}
-        <span>Página {{ page }} de {{ pages }}</span>
-        {% if page < pages %}<a href="?page={{ page + 1 }}" class="btn">Seguinte →</a>{% endif %}
+    <nav class="pagination" aria-label="{{ t('pagination_page') }}">
+        {% if page > 1 %}<a href="?page={{ page - 1 }}" class="btn">← {{ t('pagination_prev') }}</a>{% endif %}
+        <span>{{ t('pagination_page') }} {{ page }} {{ t('pagination_of') }} {{ pages }}</span>
+        {% if page < pages %}<a href="?page={{ page + 1 }}" class="btn">{{ t('pagination_next') }} →</a>{% endif %}
     </nav>
     {% endif %}
 </section>

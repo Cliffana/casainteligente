@@ -65,9 +65,9 @@
             </svg>
         </div>
         <nav class="breadcrumbs" aria-label="Breadcrumbs">
-            <a href="/">Inicio</a>
+            <a href="{{ r }}">{{ t('breadcrumb_home') }}</a>
             <span class="sep">/</span>
-            <a href="/category/{{ post.category_slug }}/">{{ post.category }}</a>
+            <a href="{{ r }}category/{{ post.category_slug }}/">{{ post.category }}</a>
             <span class="sep">/</span>
             <span>{{ post.title }}</span>
         </nav>
@@ -77,7 +77,7 @@
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ site_url }}/"},
+            {"@type": "ListItem", "position": 1, "name": "{{ t('breadcrumb_home') }}", "item": "{{ site_url }}/"},
             {"@type": "ListItem", "position": 2, "name": {{ post.category | tojson }}, "item": "{{ site_url }}/category/{{ post.category_slug }}/"},
             {"@type": "ListItem", "position": 3, "name": {{ post.title | tojson }}, "item": "{{ site_url }}{{ post.url }}"}
           ]
@@ -87,9 +87,9 @@
         <h1>{{ post.title }}</h1>
         <div class="article-meta">
             <span class="meta-calendar">{{ post.date }}</span>
-            <span class="meta-clock">{{ post.read_time }} min de leitura</span>
+            <span class="meta-clock">{{ post.read_time }} {{ t('minutes') }}</span>
             {% if post.rating %}<span class="rating">★ {{ post.rating }}/5</span>{% endif %}
-            {% if post.updated %}<span class="meta-update">Actualizado: {{ post.updated }}</span>{% endif %}
+            {% if post.updated %}<span class="meta-update">{{ t('updated') }}: {{ post.updated }}</span>{% endif %}
         </div>
         {% if post.excerpt %}
         <p class="article-excerpt">{{ post.excerpt }}</p>
@@ -99,29 +99,29 @@
     {% if post.price_current and post.price_min %}
     <div class="price-summary">
         <div class="price-stat">
-            <span class="price-label">Preco actual</span>
+            <span class="price-label">{{ t('price_current') }}</span>
             <span class="price-value">{{ "%.2f"|format(post.price_current) }} <small>EUR</small></span>
         </div>
         <div class="price-stat">
-            <span class="price-label">Preco minimo (1 ano)</span>
+            <span class="price-label">{{ t('price_min') }}</span>
             <span class="price-value price-low">{{ "%.2f"|format(post.price_min) }} <small>EUR</small></span>
         </div>
         <div class="price-stat">
-            <span class="price-label">Preco maximo (1 ano)</span>
+            <span class="price-label">{{ t('price_max') }}</span>
             <span class="price-value price-high">{{ "%.2f"|format(post.price_max) }} <small>EUR</small></span>
         </div>
         {% set savings = (post.price_max - post.price_current) if post.price_max and post.price_current else 0 %}
         {% if savings > 0 %}
         <div class="price-stat price-save">
-            <span class="price-label">Poupe ate</span>
+            <span class="price-label">{{ t('price_save') }}</span>
             <span class="price-value price-save-val">{{ "%.2f"|format(savings) }} <small>EUR</small></span>
         </div>
         {% endif %}
     </div>
     {% endif %}
 
-    <nav class="toc" aria-label="Indice">
-        <strong>Indice</strong>
+    <nav class="toc" aria-label="{{ t('toc_title') }}">
+        <strong>{{ t('toc_title') }}</strong>
         <div id="toc"></div>
     </nav>
 
@@ -131,22 +131,22 @@
 
     {% if post.price_history %}
     <div class="price-chart-section">
-        <h2>Historico de Precos (12 meses)</h2>
-        <p class="price-chart-desc">Acompanhe a evolucao do preco deste produto no ultimo ano e compre no momento certo.</p>
+        <h2>{{ t('price_chart_title') }}</h2>
+        <p class="price-chart-desc">{{ t('price_chart_desc') }}</p>
         <div class="chart-wrapper">
             <canvas id="priceChart" data-prices='{{ post.price_history | tojson }}' data-name='{{ post.title | tojson }}'></canvas>
         </div>
-        <p class="price-update-info">Ultima actualizacao: {{ post.price_history[-1].date if post.price_history else "N/A" }}</p>
+        <p class="price-update-info">{{ t('price_last_update') }}: {{ post.price_history[-1].date if post.price_history else "N/A" }}</p>
     </div>
     {% endif %}
 
     <div class="share-section">
-        <span class="share-label">Partilhe este artigo:</span>
+        <span class="share-label">{{ t('share_title') }}</span>
         <div class="share-buttons">
-            <a href="https://wa.me/?text={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-whatsapp" target="_blank" rel="noopener" aria-label="Partilhar no WhatsApp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-facebook" target="_blank" rel="noopener" aria-label="Partilhar no Facebook">Facebook</a>
-            <a href="https://pinterest.com/pin/create/button/?url={{ site_url }}{{ post.url | urlencode }}&description={{ post.title | urlencode }}" class="share-btn share-pinterest" target="_blank" rel="noopener" aria-label="Partilhar no Pinterest">Pinterest</a>
-            <a href="mailto:?subject={{ post.title | urlencode }}&body={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-email" aria-label="Partilhar por email">Email</a>
+            <a href="https://wa.me/?text={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-whatsapp" target="_blank" rel="noopener" aria-label="{{ t('share_whatsapp') }}">{{ t('share_whatsapp') }}</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-facebook" target="_blank" rel="noopener" aria-label="{{ t('share_facebook') }}">{{ t('share_facebook') }}</a>
+            <a href="https://pinterest.com/pin/create/button/?url={{ site_url }}{{ post.url | urlencode }}&description={{ post.title | urlencode }}" class="share-btn share-pinterest" target="_blank" rel="noopener" aria-label="{{ t('share_pinterest') }}">{{ t('share_pinterest') }}</a>
+            <a href="mailto:?subject={{ post.title | urlencode }}&body={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-email" aria-label="{{ t('share_email') }}">{{ t('share_email') }}</a>
         </div>
     </div>
 
@@ -160,7 +160,7 @@
     {% if post.cta_text and post.affiliate_link %}
     <div class="cta-box">
         <p>{{ post.cta_text }}</p>
-        <a href="{{ post.affiliate_link }}" class="btn btn-large btn-success" rel="sponsored nofollow" target="_blank">Ver preco mais recente →</a>
+        <a href="{{ post.affiliate_link }}" class="btn btn-large btn-success affiliate-link" rel="sponsored nofollow" target="_blank">{{ t('cta_button') }}</a>
     </div>
     {% endif %}
 
@@ -185,7 +185,7 @@
     </script>
 
     <div class="faq-section">
-        <h2>Perguntas Frequentes</h2>
+        <h2>{{ t('faq_title') }}</h2>
         <div class="faq-list">
             {% for item in post.faq %}
             <details class="faq-item">
@@ -199,15 +199,15 @@
 
     {% if related_posts %}
     <section class="related-section">
-        <h2>Artigos Relacionados</h2>
+        <h2>{{ t('related_title') }}</h2>
         <div class="grid">
             {% for rp in related_posts %}
             <article class="card">
                 <div class="card-body">
                     <h3><a href="{{ rp.url }}">{{ rp.title }}</a></h3>
-                    <p class="card-meta">{{ rp.date }} · {{ rp.read_time }} min de leitura</p>
+                    <p class="card-meta">{{ rp.date }} · {{ rp.read_time }} {{ t('minutes_short') }}</p>
                     <p>{{ rp.excerpt }}</p>
-                    <a href="{{ rp.url }}" class="card-link">Ler artigo →</a>
+                    <a href="{{ rp.url }}" class="card-link">{{ t('related_read') }} →</a>
                 </div>
             </article>
             {% endfor %}
@@ -215,7 +215,7 @@
     </section>
     {% endif %}
 
-    <nav class="post-nav" aria-label="Navegacao entre artigos">
+    <nav class="post-nav" aria-label="{{ t('prev_post') }}">
         {% if prev_post %}<a href="{{ prev_post.url }}" class="post-nav-link prev">← {{ prev_post.title }}</a>{% endif %}
         {% if next_post %}<a href="{{ next_post.url }}" class="post-nav-link next">{{ next_post.title }} →</a>{% endif %}
     </nav>
@@ -226,12 +226,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     var canvas = document.getElementById('priceChart');
     if (!canvas || typeof Chart === 'undefined') return;
-
     var data = JSON.parse(canvas.dataset.prices);
     var name = canvas.dataset.name;
-
     if (!data || data.length < 2) return;
-
     new Chart(canvas, {
         type: 'line',
         data: {
@@ -247,50 +244,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     area.addColorStop(1, 'rgba(99,102,241,0.01)');
                     return area;
                 },
-                fill: true,
-                tension: 0.4,
-                pointRadius: 4,
-                pointHoverRadius: 7,
-                pointBackgroundColor: '#6366f1',
-                pointBorderColor: '#fff',
-                pointBorderWidth: 2,
-                borderWidth: 2.5,
+                fill: true, tension: 0.4, pointRadius: 4, pointHoverRadius: 7,
+                pointBackgroundColor: '#6366f1', pointBorderColor: '#fff',
+                pointBorderWidth: 2, borderWidth: 2.5,
             }]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            aspectRatio: 2,
+            responsive: true, maintainAspectRatio: true, aspectRatio: 2,
             plugins: {
                 legend: { display: false },
                 tooltip: {
-                    backgroundColor: '#0f172a',
-                    titleColor: '#f1f5f9',
-                    bodyColor: '#f1f5f9',
-                    borderColor: '#6366f1',
-                    borderWidth: 1,
-                    cornerRadius: 10,
-                    padding: 12,
-                    callbacks: {
-                        label: function(ctx) {
-                            return ctx.parsed.y.toFixed(2) + ' EUR';
-                        }
-                    }
+                    backgroundColor: '#0f172a', titleColor: '#f1f5f9',
+                    bodyColor: '#f1f5f9', borderColor: '#6366f1',
+                    borderWidth: 1, cornerRadius: 10, padding: 12,
+                    callbacks: { label: function(ctx) { return ctx.parsed.y.toFixed(2) + ' EUR'; } }
                 }
             },
             scales: {
-                x: {
-                    ticks: { maxTicksLimit: 8, color: '#94a3b8', font: { size: 11 } },
-                    grid: { display: false }
-                },
-                y: {
-                    ticks: {
-                        color: '#94a3b8',
-                        font: { size: 11 },
-                        callback: function(v) { return v.toFixed(2) + ' EUR'; }
-                    },
-                    grid: { color: 'rgba(99,102,241,0.06)' }
-                }
+                x: { ticks: { maxTicksLimit: 8, color: '#94a3b8', font: { size: 11 } }, grid: { display: false } },
+                y: { ticks: { color: '#94a3b8', font: { size: 11 }, callback: function(v) { return v.toFixed(2) + ' EUR'; } }, grid: { color: 'rgba(99,102,241,0.06)' } }
             }
         }
     });

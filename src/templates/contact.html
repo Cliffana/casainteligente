@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Contacto — {{ site_name }}{% endblock %}
-{% block description %}Entre em contacto com o {{ site_name }}.{% endblock %}
+{% block title %}{{ t('contact_title') }} — {{ site_name }}{% endblock %}
+{% block description %}{{ t('contact_title') }} — {{ site_name }}{% endblock %}
 
 {% block content %}
 <section class="section">
-    <h1>Contacto</h1>
+    <h1>{{ t('contact_title') }}</h1>
     <div class="prose">
-        <p>Tem alguma dúvida, sugestão ou gostaria de colaborar connosco? Envie-nos um email para <a href="mailto:ola@casainteligente.pt">ola@casainteligente.pt</a>.</p>
-        <p>Respondemos geralmente em 24-48 horas úteis.</p>
+        <p>{{ t('contact_text', email=site_email) }}</p>
+        <p>{{ t('contact_response') }}</p>
     </div>
 </section>
 {% endblock %}

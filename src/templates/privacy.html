@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}Política de Privacidade — {{ site_name }}{% endblock %}
-{% block description %}Política de privacidade e termos de utilização do {{ site_name }}.{% endblock %}
+{% block title %}{{ t('privacy_title') }} — {{ site_name }}{% endblock %}
+{% block description %}{{ t('privacy_title') }} — {{ site_name }}{% endblock %}
 
 {% block content %}
 <section class="section">
-    <h1>Política de Privacidade</h1>
+    <h1>{{ t('privacy_title') }}</h1>
     <div class="prose">
-        <p>Esta política de privacidade descreve como o {{ site_name }} recolhe, utiliza e protege a sua informação.</p>
-        <h2>Informação que recolhemos</h2>
-        <p>Utilizamos ferramentas de análise (Google Analytics 4) para compreender como os visitantes utilizam o site. Estas ferramentas recolhem dados anónimos como páginas visitadas, tempo no site e origem do tráfego.</p>
-        <h2>Cookies</h2>
-        <p>Utilizamos cookies essenciais para o funcionamento do site e cookies de análise para melhorar a experiência do utilizador. Pode gerir as suas preferências de cookies nas definições do seu navegador.</p>
-        <h2>Links de Afiliados</h2>
-        <p>Alguns links neste site são links de afiliados. Poderemos receber uma comissão se efetuar uma compra através desses links, sem custo adicional para si.</p>
-        <h2>Os seus direitos</h2>
-        <p>Tem o direito de aceder, corrigir ou eliminar os seus dados pessoais. Para exercer estes direitos, contacte-nos através do formulário de contacto.</p>
+        <p>{{ t('privacy_intro', site_name=site_name) }}</p>
+        <h2>{{ t('privacy_info_title') }}</h2>
+        <p>{{ t('privacy_info_text') }}</p>
+        <h2>{{ t('privacy_cookies_title') }}</h2>
+        <p>{{ t('privacy_cookies_text') }}</p>
+        <h2>{{ t('privacy_affiliates_title') }}</h2>
+        <p>{{ t('privacy_affiliates_text') }}</p>
+        <h2>{{ t('privacy_rights_title') }}</h2>
+        <p>{{ t('privacy_rights_text') }}</p>
     </div>
 </section>
 {% endblock %}

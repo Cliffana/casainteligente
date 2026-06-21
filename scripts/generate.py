@@ -144,27 +144,12 @@ def call_llm(prompt, max_tokens=4000):
     return message.content[0].text
 
 def generate_draft(prompt):
-    return f"""# Draft Content
-
-*Nota: Conteúdo gerado localmente (sem API key). Substitua por conteúdo real quando a chave API estiver configurada.*
-
-## Introdução
-
-Este é um placeholder para o artigo solicitado. Quando configurar a variável de ambiente ANTHROPIC_API_KEY com a sua chave da Anthropic, o conteúdo real será gerado automaticamente pela IA com base no outline fornecido.
-
-## Secção Principal
-
-Conteúdo detalhado do artigo aparecerá aqui, escrito em português europeu, com:
-- Informação factual e específica sobre produtos
-- Prós e contras honestos
-- Tabelas comparativas quando relevante
-- Links de afiliados inseridos naturalmente
-- Otimização SEO com keywords relevantes
-
-## Conclusão
-
-Veredito e recomendação final para o leitor.
-"""
+    from template_content import generate_all as gen_templates
+    try:
+        gen_templates()
+    except Exception as e:
+        print(f"  [WARN] Template fallback failed: {e}")
+    return None
 
 def build_prompt(brief):
     outline_text = "\n".join(f"{i+1}. {s}" for i, s in enumerate(brief["outline"]))
@@ -224,6 +209,12 @@ def save_article(brief, body):
     return filepath
 
 def generate_all():
+    if not API_KEY:
+        print("[AI] No API key. Using template-based content instead.")
+        from template_content import generate_all as gen_templates
+        gen_templates()
+        return
+
     print(f"[AI] Generating {len(CONTENT_BRIEFS)} articles...\n")
     for brief in CONTENT_BRIEFS:
         print(f"  [>>] {brief['title']}")
@@ -233,8 +224,9 @@ def generate_all():
             save_article(brief, body)
         except Exception as e:
             print(f"  [ERR] {e}")
-            body = generate_draft(prompt)
-            save_article(brief, body)
+            print("  [FALLBACK] Using template content")
+            from template_content import generate_all as gen_templates
+            gen_templates()
     print(f"\n[DONE] Generation complete! Files saved to {CONTENT_DIR}")
 
 def generate_single(brief_id):

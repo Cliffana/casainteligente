@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="{{ lang }}{% if lang == 'pt' %}-PT{% elif lang == 'es' %}-ES{% elif lang == 'fr' %}-FR{% else %}-US{% endif %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,10 @@
     <meta name="description" content="{% block description %}{{ site_description }}{% endblock %}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ site_url }}{{ page_url }}">
+    {% for l in langs %}
+    <link rel="alternate" hreflang="{{ l.code }}" href="{{ url_for_lang(l.code, page_url) }}">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="https://cliffana.github.io/casainteligente{{ page_url }}">
     <meta property="og:title" content="{% block og_title %}{{ site_name }}{% endblock %}">
     <meta property="og:description" content="{% block og_description %}{{ site_description }}{% endblock %}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
@@ -18,23 +22,33 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="alternate" type="application/rss+xml" title="{{ site_name }}" href="/rss.xml">
     {% block extra_head %}{% endblock %}
+    <script data-goatcounter="https://casainteligente.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+{% set r = '/' if lang == default_lang else '/' + lang + '/' %}
     <header class="header">
-        <nav class="nav container" aria-label="Navegacao principal">
-            <a href="/" class="logo">
+        <nav class="nav container" aria-label="{{ t('nav_home') }}">
+            <a href="{{ r }}" class="logo">
                 <span class="logo-icon">HI</span>
                 {{ site_name }}
             </a>
-            <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <button class="nav-toggle" aria-label="{{ t('nav_home') }}" onclick="document.querySelector('.nav-links').classList.toggle('open')">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="/" {% if page_url == '/' %}class="active"{% endif %}>Inicio</a></li>
-                <li><a href="/category/guias/" {% if '/guias' in page_url %}class="active"{% endif %}>Guias</a></li>
-                <li><a href="/category/reviews/" {% if '/reviews' in page_url %}class="active"{% endif %}>Reviews</a></li>
-                <li><a href="/category/comparacoes/" {% if '/comparacoes' in page_url %}class="active"{% endif %}>Comparacoes</a></li>
-                <li><a href="/sobre/" {% if '/sobre' in page_url %}class="active"{% endif %}>Sobre</a></li>
+                <li><a href="{{ r }}" {% if page_url == r %}class="active"{% endif %}>{{ t('nav_home') }}</a></li>
+                <li><a href="{{ r }}category/guides/" {% if '/guides' in page_url %}class="active"{% endif %}>{{ t('nav_guides') }}</a></li>
+                <li><a href="{{ r }}category/reviews/" {% if '/reviews' in page_url %}class="active"{% endif %}>{{ t('nav_reviews') }}</a></li>
+                <li><a href="{{ r }}category/comparacoes/" {% if '/comparaco' in page_url %}class="active"{% endif %}>{{ t('nav_comparisons') }}</a></li>
+                <li><a href="{{ r }}sobre/" {% if '/sobre' in page_url %}class="active"{% endif %}>{{ t('nav_about') }}</a></li>
+                <li class="nav-lang-dropdown">
+                    <a href="#" class="lang-toggle" onclick="event.preventDefault(); this.nextElementSibling.classList.toggle('open')">{{ t('nav_language') }} ▾</a>
+                    <ul class="lang-dropdown">
+                        {% for l in langs %}
+                        <li><a href="{{ url_for_lang(l.code, page_url) }}" {% if l.code == lang %}class="active"{% endif %}>{{ l.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -50,37 +64,45 @@
                 <p>{{ site_description }}</p>
             </div>
             <div class="footer-section">
-                <h4>Navegacao</h4>
+                <h4>{{ t('footer_nav') }}</h4>
                 <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/category/guias/">Guias</a></li>
-                    <li><a href="/category/reviews/">Reviews</a></li>
-                    <li><a href="/category/comparacoes/">Comparacoes</a></li>
-                    <li><a href="/sobre/">Sobre</a></li>
+                    <li><a href="{{ r }}">{{ t('nav_home') }}</a></li>
+                    <li><a href="{{ r }}category/guides/">{{ t('nav_guides') }}</a></li>
+                    <li><a href="{{ r }}category/reviews/">{{ t('nav_reviews') }}</a></li>
+                    <li><a href="{{ r }}category/comparacoes/">{{ t('nav_comparisons') }}</a></li>
+                    <li><a href="{{ r }}sobre/">{{ t('nav_about') }}</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Legal</h4>
+                <h4>{{ t('footer_legal') }}</h4>
                 <ul>
-                    <li><a href="/privacidade/">Politica de Privacidade</a></li>
-                    <li><a href="/contacto/">Contacto</a></li>
+                    <li><a href="{{ r }}privacidade/">{{ t('nav_privacy') }}</a></li>
+                    <li><a href="{{ r }}contacto/">{{ t('nav_contact') }}</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>{{ t('nav_language') }}</h4>
+                <ul>
+                    {% for l in langs %}
+                    <li><a href="{{ url_for_lang(l.code, page_url) }}" {% if l.code == lang %}class="active"{% endif %}>{{ l.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="footer-section footer-newsletter">
-                <h4>Newsletter</h4>
-                <p>Receba as melhores promocoes de casa inteligente no seu email.</p>
-                <form class="newsletter-form" action="mailto:ola@casainteligente.pt" method="post" enctype="text/plain">
-                    <input type="email" name="email" placeholder="O seu email" required>
-                    <button type="submit" class="btn btn-small">Subscrever</button>
+                <h4>{{ t('footer_newsletter') }}</h4>
+                <p>{{ t('newsletter_footer') }}</p>
+                <form class="newsletter-form" action="mailto:{{ site_email }}" method="post" enctype="text/plain">
+                    <input type="email" name="email" placeholder="{{ t('newsletter_placeholder') }}" required>
+                    <button type="submit" class="btn btn-small">{{ t('newsletter_button') }}</button>
                 </form>
             </div>
             <div class="footer-section">
-                <h4>Aviso de Afiliados</h4>
-                <p class="footer-disclosure">Este site contem links de afiliados. Poderemos receber uma comissao por compras efetuadas atraves destes links, sem custo adicional para si.</p>
+                <h4>{{ t('footer_legal') }}</h4>
+                <p class="footer-disclosure">{{ t('footer_disclosure') }}</p>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; {{ build_year }} {{ site_name }}. Todos os direitos reservados.</p>
+            <p>&copy; {{ build_year }} {{ site_name }}. {{ t('footer_rights') }}</p>
         </div>
     </footer>
 

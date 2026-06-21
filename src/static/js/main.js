@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var list = document.createElement('ul');
             var lastH2 = null;
             headings.forEach(function(h, i) {
-                if (!h.id) {
-                    h.id = 's' + i;
-                }
+                if (!h.id) { h.id = 's' + i; }
                 var li = document.createElement('li');
                 var a = document.createElement('a');
                 a.href = '#' + h.id;
@@ -52,4 +50,30 @@ document.addEventListener('DOMContentLoaded', function() {
             toc.style.display = 'none';
         }
     }
+
+    var langToggle = document.querySelector('.lang-toggle');
+    var langDropdown = document.querySelector('.lang-dropdown');
+    if (langToggle && langDropdown) {
+        document.addEventListener('click', function(e) {
+            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('open');
+            }
+        });
+    }
+
+    document.querySelectorAll('a.affiliate-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            try {
+                var url = link.getAttribute('href');
+                var label = link.textContent.trim().substring(0, 100);
+                if (typeof window.goatcounter !== 'undefined' && window.goatcounter.count) {
+                    window.goatcounter.count({
+                        path: '/outbound/affiliate',
+                        event: true,
+                        title: label
+                    });
+                }
+            } catch(err) {}
+        });
+    });
 });

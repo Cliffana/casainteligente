@@ -1,9 +1,9 @@
-name: Scrape prices + Build + Deploy
+name: Build & Deploy (Multi-Language)
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Every Monday at 06:00 UTC
-  workflow_dispatch:      # Manual trigger
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
   push:
     branches: [main]
 
@@ -24,19 +24,19 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install anthropic  # For AI content generation
+        run: pip install -r requirements.txt
 
       - name: Scrape Amazon prices
         run: python scripts/scraper.py
 
-      - name: Generate AI content (if API key set)
+      - name: Generate AI content (PT + translations)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/generate.py
+        run: |
+          python scripts/generate.py
+          python scripts/translate.py
 
-      - name: Build static site
+      - name: Build static site (all languages)
         run: python scripts/build.py
 
       - name: Deploy to GitHub Pages

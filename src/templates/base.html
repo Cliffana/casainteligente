@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ site_description }}{% endblock %}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ site_url }}{{ page_url }}">
+    <meta property="og:title" content="{% block og_title %}{{ site_name }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ site_description }}{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:url" content="{{ site_url }}{{ page_url }}">
+    <meta property="og:site_name" content="{{ site_name }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ site_name }}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ site_description }}{% endblock %}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/rss+xml" title="{{ site_name }}" href="/rss.xml">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container" aria-label="Navegação principal">
+            <a href="/" class="logo">
+                <span class="logo-icon">⌂</span>
+                {{ site_name }}
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" {% if page_url == '/' %}class="active"{% endif %}>Inicio</a></li>
+                <li><a href="/category/guias/" {% if '/guias' in page_url %}class="active"{% endif %}>Guias</a></li>
+                <li><a href="/category/reviews/" {% if '/reviews' in page_url %}class="active"{% endif %}>Reviews</a></li>
+                <li><a href="/category/comparacoes/" {% if '/comparacoes' in page_url %}class="active"{% endif %}>Comparacoes</a></li>
+                <li><a href="/sobre/" {% if '/sobre' in page_url %}class="active"{% endif %}>Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>{{ site_name }}</h3>
+                <p>{{ site_description }}</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegacao</h4>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/category/guias/">Guias</a></li>
+                    <li><a href="/category/reviews/">Reviews</a></li>
+                    <li><a href="/category/comparacoes/">Comparacoes</a></li>
+                    <li><a href="/sobre/">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacidade/">Politica de Privacidade</a></li>
+                    <li><a href="/contacto/">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Receba as melhores promocoes de casa inteligente no seu email.</p>
+                <form class="newsletter-form" action="mailto:ola@casainteligente.pt" method="post" enctype="text/plain">
+                    <input type="email" name="email" placeholder="O seu email" required>
+                    <button type="submit" class="btn btn-small">Subscrever</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Aviso de Afiliados</h4>
+                <p class="footer-disclosure">Este site contem links de afiliados. Poderemos receber uma comissao por compras efetuadas atraves destes links, sem custo adicional para si.</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; {{ build_year }} {{ site_name }}. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    {% block extra_scripts %}{% endblock %}
+
+    <script type="application/ld+json">
+    {{ page_schema | safe }}
+    </script>
+</body>
+</html>

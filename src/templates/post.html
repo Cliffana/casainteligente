@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} — {{ site_name }}{% endblock %}
+{% block description %}{{ post.excerpt }}{% endblock %}
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ post.excerpt }}{% endblock %}
+{% block og_type %}article{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ post.title | tojson }},
+  "description": {{ post.excerpt | tojson }},
+  "datePublished": "{{ post.date_iso }}",
+  "author": {"@type": "Person", "name": {{ post.author | tojson }}},
+  "publisher": {"@type": "Organization", "name": {{ site_name | tojson }}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "{{ site_url }}{{ post.url }}"}
+  {% if post.price_current %},
+  "offers": {
+    "@type": "Offer",
+    "price": {{ post.price_current }},
+    "priceCurrency": "{{ post.price_currency }}",
+    "url": {{ post.affiliate_link | tojson }},
+    "availability": "https://schema.org/InStock"
+  }
+  {% endif %}
+}
+</script>
+{% if post.price_history %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<article class="article">
+    <header class="article-header">
+        <div class="article-image">
+            <svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#1e3a5f"/>
+                        <stop offset="100%" stop-color="#2563eb"/>
+                    </linearGradient>
+                </defs>
+                <rect width="800" height="300" fill="url(#bg)"/>
+                <g transform="translate(400,150)" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="2">
+                    <rect x="-80" y="-60" width="160" height="120" rx="12"/>
+                    <line x1="-60" y1="-20" x2="60" y2="-20"/>
+                    <line x1="-60" y1="10" x2="60" y2="10"/>
+                    <line x1="-60" y1="40" x2="30" y2="40"/>
+                    <circle cx="-60" cy="-20" r="4" fill="rgba(255,255,255,.3)"/>
+                    <circle cx="0" cy="-20" r="4" fill="rgba(255,255,255,.3)"/>
+                    <circle cx="40" cy="-20" r="4" fill="rgba(255,255,255,.3)"/>
+                </g>
+                <g transform="translate(400,150)" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1.5">
+                    <path d="M-200,-80 Q-100,-120 0,-80 Q100,-40 200,-80"/>
+                    <path d="M-180,-60 Q-80,-100 20,-60 Q120,-20 220,-60"/>
+                    <path d="M-220,60 Q-120,20 -20,60 Q80,100 180,60"/>
+                </g>
+                <text x="400" y="210" text-anchor="middle" fill="rgba(255,255,255,.6)" font-family="system-ui" font-size="14">{{ post.category }}</text>
+            </svg>
+        </div>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <a href="/">Inicio</a>
+            <span class="sep">/</span>
+            <a href="/category/{{ post.category_slug }}/">{{ post.category }}</a>
+            <span class="sep">/</span>
+            <span>{{ post.title }}</span>
+        </nav>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ site_url }}/"},
+            {"@type": "ListItem", "position": 2, "name": {{ post.category | tojson }}, "item": "{{ site_url }}/category/{{ post.category_slug }}/"},
+            {"@type": "ListItem", "position": 3, "name": {{ post.title | tojson }}, "item": "{{ site_url }}{{ post.url }}"}
+          ]
+        }
+        </script>
+
+        <h1>{{ post.title }}</h1>
+        <div class="article-meta">
+            <span class="meta-calendar">{{ post.date }}</span>
+            <span class="meta-clock">{{ post.read_time }} min de leitura</span>
+            {% if post.rating %}<span class="rating">★ {{ post.rating }}/5</span>{% endif %}
+            {% if post.updated %}<span class="meta-update">Actualizado: {{ post.updated }}</span>{% endif %}
+        </div>
+        {% if post.excerpt %}
+        <p class="article-excerpt">{{ post.excerpt }}</p>
+        {% endif %}
+    </header>
+
+    {% if post.price_current and post.price_min %}
+    <div class="price-summary">
+        <div class="price-stat">
+            <span class="price-label">Preco actual</span>
+            <span class="price-value">{{ "%.2f"|format(post.price_current) }} <small>EUR</small></span>
+        </div>
+        <div class="price-stat">
+            <span class="price-label">Preco minimo (1 ano)</span>
+            <span class="price-value price-low">{{ "%.2f"|format(post.price_min) }} <small>EUR</small></span>
+        </div>
+        <div class="price-stat">
+            <span class="price-label">Preco maximo (1 ano)</span>
+            <span class="price-value price-high">{{ "%.2f"|format(post.price_max) }} <small>EUR</small></span>
+        </div>
+        {% set savings = (post.price_max - post.price_current) if post.price_max and post.price_current else 0 %}
+        {% if savings > 0 %}
+        <div class="price-stat price-save">
+            <span class="price-label">Poupe ate</span>
+            <span class="price-value price-save-val">{{ "%.2f"|format(savings) }} <small>EUR</small></span>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <nav class="toc" aria-label="Indice">
+        <strong>Indice</strong>
+        <div id="toc"></div>
+    </nav>
+
+    <div class="article-content">
+        {{ post.content | safe }}
+    </div>
+
+    {% if post.price_history %}
+    <div class="price-chart-section">
+        <h2>Historico de Precos (12 meses)</h2>
+        <p class="price-chart-desc">Acompanhe a evolucao do preco deste produto no ultimo ano e compre no momento certo.</p>
+        <div class="chart-wrapper">
+            <canvas id="priceChart" data-prices='{{ post.price_history | tojson }}' data-name='{{ post.title | tojson }}'></canvas>
+        </div>
+        <p class="price-update-info">Ultima actualizacao: {{ post.price_history[-1].date if post.price_history else "N/A" }}</p>
+    </div>
+    {% endif %}
+
+    {% if post.faq and post.faq|length > 0 %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in post.faq %}
+        {
+          "@type": "Question",
+          "name": {{ item.question | tojson }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.answer | tojson }}
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+    </script>
+
+    <div class="faq-section">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-list">
+            {% for item in post.faq %}
+            <details class="faq-item">
+                <summary class="faq-question">{{ item.question }}</summary>
+                <div class="faq-answer">{{ item.answer }}</div>
+            </details>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="share-section">
+        <span class="share-label">Partilhe este artigo:</span>
+        <div class="share-buttons">
+            <a href="https://wa.me/?text={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-whatsapp" target="_blank" rel="noopener" aria-label="Partilhar no WhatsApp">WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-facebook" target="_blank" rel="noopener" aria-label="Partilhar no Facebook">Facebook</a>
+            <a href="https://pinterest.com/pin/create/button/?url={{ site_url }}{{ post.url | urlencode }}&description={{ post.title | urlencode }}" class="share-btn share-pinterest" target="_blank" rel="noopener" aria-label="Partilhar no Pinterest">Pinterest</a>
+            <a href="mailto:?subject={{ post.title | urlencode }}&body={{ site_url }}{{ post.url | urlencode }}" class="share-btn share-email" aria-label="Partilhar por email">Email</a>
+        </div>
+    </div>
+
+    {% if post.affiliate_disclosure %}
+    <div class="disclosure">
+        <span class="disclosure-icon">i</span>
+        <p>{{ post.affiliate_disclosure }}</p>
+    </div>
+    {% endif %}
+
+    {% if post.cta_text and post.affiliate_link %}
+    <div class="cta-box">
+        <p>{{ post.cta_text }}</p>
+        <a href="{{ post.affiliate_link }}" class="btn btn-large btn-success" rel="sponsored nofollow" target="_blank">Ver preco mais recente →</a>
+    </div>
+    {% endif %}
+
+    {% if related_posts %}
+    <section class="related-section">
+        <h2>Artigos Relacionados</h2>
+        <div class="grid">
+            {% for rp in related_posts %}
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="{{ rp.url }}">{{ rp.title }}</a></h3>
+                    <p class="card-meta">{{ rp.date }} · {{ rp.read_time }} min de leitura</p>
+                    <p>{{ rp.excerpt }}</p>
+                    <a href="{{ rp.url }}" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <nav class="post-nav" aria-label="Navegacao entre artigos">
+        {% if prev_post %}<a href="{{ prev_post.url }}" class="post-nav-link prev">← {{ prev_post.title }}</a>{% endif %}
+        {% if next_post %}<a href="{{ next_post.url }}" class="post-nav-link next">{{ next_post.title }} →</a>{% endif %}
+    </nav>
+</article>
+
+{% if post.price_history %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var canvas = document.getElementById('priceChart');
+    if (!canvas || typeof Chart === 'undefined') return;
+
+    var data = JSON.parse(canvas.dataset.prices);
+    var name = canvas.dataset.name;
+
+    if (!data || data.length < 2) return;
+
+    new Chart(canvas, {
+        type: 'line',
+        data: {
+            labels: data.map(function(p) { return p.date; }),
+            datasets: [{
+                label: 'Preco (EUR)',
+                data: data.map(function(p) { return p.price; }),
+                borderColor: '#2563eb',
+                backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                fill: true,
+                tension: 0.3,
+                pointRadius: 3,
+                pointHoverRadius: 6,
+                pointBackgroundColor: '#2563eb',
+                borderWidth: 2,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(ctx) {
+                            return ctx.parsed.y.toFixed(2) + ' EUR';
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { maxTicksLimit: 8, color: '#94a3b8' },
+                    grid: { display: false }
+                },
+                y: {
+                    ticks: {
+                        color: '#94a3b8',
+                        callback: function(v) { return v.toFixed(2) + ' EUR'; }
+                    },
+                    grid: { color: '#f1f5f9' }
+                }
+            }
+        }
+    });
+});
+</script>
+{% endif %}
+{% endblock %}

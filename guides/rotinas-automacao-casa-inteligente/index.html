@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="D5NstmvIUgjJ7cWCicbDu8hWl0Ssci3wzZ9VO9lpotw" />
+    <title>Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026 — Casa Inteligente PT</title>
+    <meta name="description" content="Aprenda a criar automações inteligentes em casa. Rotinas com Alexa, Google Home e sensores — exemplos práticos para começar hoje.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/">
+    
+    <link rel="alternate" hreflang="pt" href="https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/">
+    
+    <link rel="alternate" hreflang="es" href="https://cliffana.github.io/casainteligente/es/guides/rotinas-automacao-casa-inteligente/">
+    
+    <link rel="alternate" hreflang="fr" href="https://cliffana.github.io/casainteligente/fr/guides/rotinas-automacao-casa-inteligente/">
+    
+    <link rel="alternate" hreflang="en" href="https://cliffana.github.io/casainteligente/en/guides/rotinas-automacao-casa-inteligente/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/">
+    <meta property="og:title" content="Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026">
+    <meta property="og:description" content="Aprenda a criar automações inteligentes em casa. Rotinas com Alexa, Google Home e sensores — exemplos práticos para começar hoje.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/">
+    <meta property="og:site_name" content="Casa Inteligente PT">
+    <meta property="og:image" content="https://casainteligentept.com/images/tapo-l530e.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://casainteligentept.com/images/tapo-l530e.jpg">
+    <meta name="pinterest-rich-pin" content="true">
+    <meta name="twitter:title" content="Casa Inteligente PT">
+    <meta name="twitter:description" content="Guias, reviews e comparações de produtos para casa inteligente. Reviews honestas de Amazon Alexa, Google Home, Xiaomi, Aqara e mais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/images/LOGO.svg">
+    <link rel="apple-touch-icon" href="/images/LOGO.svg">
+    <meta name="theme-color" content="#1a6d73">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/rss+xml" title="Casa Inteligente PT" href="/rss.xml">
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como Criar Rotinas de Automa\u00e7\u00e3o em Casa \u2014 Guia Passo a Passo 2026",
+  "description": "Aprenda a criar automa\u00e7\u00f5es inteligentes em casa. Rotinas com Alexa, Google Home e sensores \u2014 exemplos pr\u00e1ticos para come\u00e7ar hoje.",
+  "datePublished": "2026-06-23",
+  "author": {"@type": "Person", "name": "Equipa Casa Inteligente PT"},
+  "publisher": {"@type": "Organization", "name": "Casa Inteligente PT"},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/"}
+  ,
+  "offers": {
+    "@type": "Offer",
+    "price": 19.99,
+    "priceCurrency": "EUR",
+    "url": "https://www.amazon.es/dp/B08QRQQ53T?tag=casainteli0e7-21",
+    "availability": "https://schema.org/InStock"
+  }
+  
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+
+
+    <script data-goatcounter="https://casainteligente.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script>
+    if (window.location.hostname === 'cliffana.github.io') {
+        window.location.replace('https://casainteligentept.com' + window.location.pathname.replace('/casainteligente', ''));
+    }
+    </script>
+</head>
+<body>
+
+
+    <div class="progress-bar" id="progressBar"></div>
+    <header class="header">
+        <nav class="nav container" aria-label="Início">
+            <a href="/" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="display:block">
+                        <path d="M256 72 L96 210 V416 H416 V210 Z" fill="none" stroke="white" stroke-width="22" stroke-linejoin="round"/>
+                        <path d="M184 208 Q256 150 328 208" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+                        <path d="M206 238 Q256 198 306 238" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+                        <path d="M228 266 Q256 244 284 266" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+                        <circle cx="256" cy="295" r="12" fill="white"/>
+                        <rect x="226" y="315" width="60" height="100" rx="10" fill="white"/>
+                    </svg>
+                </span>
+                Casa Inteligente PT
+            </a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" >Início</a></li>
+                <li><a href="/category/guides/" class="active">Guias</a></li>
+                <li><a href="/category/reviews/" >Reviews</a></li>
+                <li><a href="/category/comparacoes/" >Comparações</a></li>
+                <li><a href="/sobre/" >Sobre</a></li>
+                <li><a href="/precos/" }>💰 Preços</a></li>
+                <li class="nav-lang-dropdown">
+                    <a href="#" class="lang-toggle" onclick="event.preventDefault(); this.nextElementSibling.classList.toggle('open')">Idioma ▾</a>
+                    <ul class="lang-dropdown">
+                        
+                        <li><a href="https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/" class="active">🇵🇹 Português</a></li>
+                        
+                        <li><a href="https://cliffana.github.io/casainteligente/es/guides/rotinas-automacao-casa-inteligente/" >🇪🇸 Español</a></li>
+                        
+                        <li><a href="https://cliffana.github.io/casainteligente/fr/guides/rotinas-automacao-casa-inteligente/" >🇫🇷 Français</a></li>
+                        
+                        <li><a href="https://cliffana.github.io/casainteligente/en/guides/rotinas-automacao-casa-inteligente/" >🇬🇧 English</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main container">
+        
+<article class="article">
+    <header class="article-header">
+        <div class="article-image">
+            
+            <img src="/images/shelly-1pm.jpg" alt="Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026" loading="lazy">
+            
+        </div>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <a href="/">Início</a>
+            <span class="sep">/</span>
+            <a href="/category/guides/">Guias</a>
+            <span class="sep">/</span>
+            <span>Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026</span>
+        </nav>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://casainteligentept.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Guias", "item": "https://casainteligentept.com/category/guides/"},
+            {"@type": "ListItem", "position": 3, "name": "Como Criar Rotinas de Automa\u00e7\u00e3o em Casa \u2014 Guia Passo a Passo 2026", "item": "https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/"}
+          ]
+        }
+        </script>
+
+        <h1>Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026</h1>
+        <div class="article-meta">
+            <span class="meta-calendar">23/06/2026</span>
+            <span class="meta-clock">4 min de leitura</span>
+            
+            
+        </div>
+        
+        <p class="article-excerpt">Aprenda a criar automações inteligentes em casa. Rotinas com Alexa, Google Home e sensores — exemplos práticos para começar hoje.</p>
+        
+    </header>
+
+    
+    <div class="price-summary">
+        <div class="price-stat">
+            <span class="price-label">Preço atual</span>
+            <span class="price-value">19.99 <small>EUR</small></span>
+        </div>
+        <div class="price-stat">
+            <span class="price-label">Preço mínimo (1 ano)</span>
+            <span class="price-value price-low">19.99 <small>EUR</small></span>
+        </div>
+        <div class="price-stat">
+            <span class="price-label">Preço máximo (1 ano)</span>
+            <span class="price-value price-high">19.99 <small>EUR</small></span>
+        </div>
+        
+        
+    </div>
+    
+
+    <nav class="toc" aria-label="Índice">
+        <strong>Índice</strong>
+        <div id="toc"></div>
+    </nav>
+
+    <div class="article-content">
+        <div class="callout callout-success">
+<div class="callout-title">O que vai aprender neste guia</div>
+
+- Como funcionam as rotinas de automação
+- 5 automações essenciais que todos deviam ter
+- Exemplos reais com Alexa e Google Home
+- Como usar sensores para automações inteligentes
+- Dicas para não encher a casa de notificações
+
+</div>
+
+<h2 id="o-que-sao-rotinas-de-automacao">O Que São Rotinas de Automação?</h2>
+<p>Uma rotina de automação é uma regra do tipo: <strong>"Se acontecer X, então faz Y"</strong>. Exemplos:</p>
+<ul>
+<li><strong>"Se a porta da rua abrir depois das 20h, acende a luz da entrada"</strong></li>
+<li><strong>"Se a temperatura passar dos 25°C, liga a ventoinha"</strong></li>
+<li><strong>"Se disser 'Alexa, bom dia', acende as luzes e diz a meteorologia"</strong></li>
+</ul>
+<p>As rotinas são o que transformam uma coleção de dispositivos inteligentes numa <strong>casa verdadeiramente inteligente</strong> — que reage sozinha, sem precisar de comandos.</p>
+<div class="key-takeaways">
+<div class="key-takeaways-title">Pontos-chave</div>
+
+- Rotinas = gatilho + ação
+- Funcionam por voz, horário, sensores ou localização
+- Comece simples: 1 gatilho, 1 ação
+- Teste sempre antes de confiar
+
+</div>
+
+<h2 id="5-automacoes-essenciais-para-comecar">5 Automações Essenciais para Começar</h2>
+<h3 id="1-luzes-automaticas-com-sensor-de-movimento">1. Luzes Automáticas com Sensor de Movimento</h3>
+<p>A automação mais útil e fácil de fazer. Precisa de:
+- 1 sensor de movimento (Aqara, ~12€ AliExpress)
+- 1 lâmpada inteligente (Tapo L530E, ~14€)</p>
+<p><strong>Regra:</strong> Se o sensor detetar movimento → acende a luz. Após 2 minutos sem movimento → apaga.</p>
+<p>Ideal para corredores, casas de banho e entradas. Nunca mais procura o interruptor no escuro.</p>
+<h3 id="2-alerta-de-porta-aberta">2. Alerta de Porta Aberta</h3>
+<p><strong>Regra:</strong> Se a porta/janela abrir → envia notificação no telemóvel.</p>
+<p>Precisa de um sensor de porta Aqara (~8€). Útil para saber se a porta de casa ficou aberta, ou se a janela do quarto abriu durante a noite.</p>
+<h3 id="3-rotina-matinal-por-voz">3. Rotina Matinal por Voz</h3>
+<p><strong>Regra:</strong> "Alexa, bom dia" → acende luzes a 50%, lê as notícias, diz a meteorologia.</p>
+<p>Não precisa de sensores extra. Basta ter uma Alexa ou Google Home e uma lâmpada inteligente. Em 2 minutos está feito.</p>
+<h3 id="4-controlo-de-temperatura">4. Controlo de Temperatura</h3>
+<p><strong>Regra:</strong> Se a temperatura passar de 25°C → liga ventoinha/AC inteligente. Se descer abaixo de 18°C → liga aquecedor.</p>
+<p>Precisa de um sensor de temperatura (~10€) e uma tomada inteligente (~12€). A Tapo P115 tem monitorização de energia — pode ver quanto gasta cada aparelho.</p>
+<div class="quick-stats">
+<div class="stat-card">
+<div class="stat-value">~30€</div>
+<div class="stat-label">Custo total para automação de temperatura</div>
+</div>
+<div class="stat-card">
+<div class="stat-value">5-15€</div>
+<div class="stat-label">Poupança mensal na conta da luz</div>
+</div>
+</div>
+
+<h3 id="5-simulacao-de-presenca">5. Simulação de Presença</h3>
+<p><strong>Regra:</strong> Entre as 19h e as 23h, acende e apaga luzes aleatoriamente em várias divisões.</p>
+<p>Dá a impressão de que há gente em casa mesmo quando está de férias. Basta ter lâmpadas inteligentes — pode programar pela app Alexa ou Tapo em 5 minutos.</p>
+<h2 id="como-criar-rotinas-na-alexa">Como Criar Rotinas na Alexa</h2>
+<ol>
+<li>Abra a <strong>app Alexa</strong></li>
+<li>Vá a <strong>Mais → Rotinas</strong></li>
+<li>Clique no <strong>+</strong> (canto superior direito)</li>
+<li>Em <strong>"Quando"</strong>, escolha o gatilho:
+   - Voz (ex: "Alexa, cinema")
+   - Horário (ex: "Todos os dias às 7h")
+   - Dispositivo (ex: "Sensor de movimento deteta")
+   - Localização (ex: "Quando chega a casa")</li>
+<li>Em <strong>"Ação"</strong>, escolha o que acontece:
+   - Acender/apagar luzes
+   - Ligar tomada
+   - Enviar notificação
+   - Dizer algo</li>
+<li>Clique em <strong>Guardar</strong></li>
+</ol>
+<h2 id="como-criar-rotinas-no-google-home">Como Criar Rotinas no Google Home</h2>
+<p>O processo é idêntico:
+1. Abra a <strong>app Google Home</strong>
+2. Vá a <strong>Automações → Adicionar</strong>
+3. Escolha o gatilho e a ação
+4. Guarde</p>
+<h2 id="pros-e-contras-das-automacoes">Prós e Contras das Automações</h2>
+<div class="pros-cons">
+<div class="pros">
+<div class="pros-title">Benefícios</div>
+
+- Conforto — luzes que se acendem sozinhas
+- Segurança — alertas de porta aberta
+- Poupança — aparelhos desligam automaticamente
+- Acessibilidade — útil para pessoas com mobilidade reduzida
+
+</div>
+<div class="cons">
+<div class="cons-title">Cuidados</div>
+
+- Não automatize coisas críticas (fechaduras sem backup físico)
+- Teste durante 1 semana antes de confiar
+- Tenha sempre um plano B manual (interruptor físico)
+- WiFi instável pode falhar automações
+
+</div>
+</div>
+
+<div class="verdict">
+<div class="verdict-title">Por Onde Começar?</div>
+<div class="verdict-text">
+
+1. **Compra 1 lâmpada Tapo L530E (~14€) + 1 sensor Aqara (~10€)** = kit inicial por 24€
+2. **Cria a primeira automação** — luz automática com sensor
+3. **Adiciona mais sensores** conforme precisa (porta, temperatura)
+4. **Explora rotinas por voz** — "bom dia", "boa noite", "cinema"
+
+Começar por uma automação simples e ir expandindo é a melhor forma de aprender sem se sentir sobrecarregado. Em 2 semanas já não vai querer voltar atrás.
+
+</div>
+</div>
+    </div>
+
+    
+    <div class="price-chart-section">
+        <h2>Histórico de Preços (12 meses)</h2>
+        <p class="price-chart-desc">Acompanhe a evolução do preço deste produto no último ano e compre no momento certo.</p>
+        <div class="chart-wrapper">
+            <canvas id="priceChart" data-prices='[{"date": "2026-06-24", "price": 19.99}]' data-name='"Como Criar Rotinas de Automa\u00e7\u00e3o em Casa \u2014 Guia Passo a Passo 2026"'></canvas>
+        </div>
+        <p class="price-update-info">Última atualização: 2026-06-24</p>
+    </div>
+    
+
+    <div class="share-section">
+        <span class="share-label">Partilhe este artigo:</span>
+        <div class="share-buttons">
+            <a href="https://wa.me/?text=https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/" class="share-btn share-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/" class="share-btn share-facebook" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            <a href="https://pinterest.com/pin/create/button/?url=https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/&description=Como%20Criar%20Rotinas%20de%20Automa%C3%A7%C3%A3o%20em%20Casa%20%E2%80%94%20Guia%20Passo%20a%20Passo%202026" class="share-btn share-pinterest" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+            <a href="mailto:?subject=Como%20Criar%20Rotinas%20de%20Automa%C3%A7%C3%A3o%20em%20Casa%20%E2%80%94%20Guia%20Passo%20a%20Passo%202026&body=https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/" class="share-btn share-email" aria-label="Email">Email</a>
+        </div>
+    </div>
+
+    
+    <div class="disclosure">
+        <span class="disclosure-icon">i</span>
+        <p>Este artigo contém links de afiliados. Poderemos receber uma comissão por compras efetuadas através destes links, sem custo adicional para si.</p>
+    </div>
+    
+
+    
+    <div class="cta-box">
+        <p>Comece a automatizar com as melhores lâmpadas e sensores.</p>
+        <a href="https://www.amazon.es/dp/B08QRQQ53T?tag=casainteli0e7-21" class="btn btn-large btn-success affiliate-link" rel="sponsored nofollow" target="_blank">Ver preço mais recente →</a>
+    </div>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        
+        {
+          "@type": "Question",
+          "name": "Preciso de um hub para criar automa\u00e7\u00f5es?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N\u00e3o necessariamente. Se usar dispositivos WiFi (Tapo, Sonoff, Govee), as automa\u00e7\u00f5es funcionam diretamente pelas apps ou pela Alexa/Google Home. Sensores Zigbee (Aqara) precisam do hub respetivo mas trazem rotinas mais avan\u00e7adas."
+          }
+        },
+        
+        {
+          "@type": "Question",
+          "name": "As rotinas funcionam se a internet falhar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende. Rotinas na cloud (Alexa, Google Home) precisam de internet. Rotinas locais (Home Assistant, Aqara Hub) funcionam offline. Para automa\u00e7\u00f5es cr\u00edticas (seguran\u00e7a), prefira solu\u00e7\u00f5es com processamento local."
+          }
+        },
+        
+        {
+          "@type": "Question",
+          "name": "Quantas rotinas posso ter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na Alexa e Google Home o limite \u00e9 muito alto (centenas de rotinas). Na pr\u00e1tica, 5-10 rotinas bem feitas cobrem 90% das necessidades de uma casa t\u00edpica."
+          }
+        }
+        
+      ]
+    }
+    </script>
+
+    <div class="faq-section">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-list">
+            
+            <details class="faq-item">
+                <summary class="faq-question">Preciso de um hub para criar automações?</summary>
+                <div class="faq-answer">Não necessariamente. Se usar dispositivos WiFi (Tapo, Sonoff, Govee), as automações funcionam diretamente pelas apps ou pela Alexa/Google Home. Sensores Zigbee (Aqara) precisam do hub respetivo mas trazem rotinas mais avançadas.</div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">As rotinas funcionam se a internet falhar?</summary>
+                <div class="faq-answer">Depende. Rotinas na cloud (Alexa, Google Home) precisam de internet. Rotinas locais (Home Assistant, Aqara Hub) funcionam offline. Para automações críticas (segurança), prefira soluções com processamento local.</div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">Quantas rotinas posso ter?</summary>
+                <div class="faq-answer">Na Alexa e Google Home o limite é muito alto (centenas de rotinas). Na prática, 5-10 rotinas bem feitas cobrem 90% das necessidades de uma casa típica.</div>
+            </details>
+            
+        </div>
+    </div>
+    
+
+    <section class="comments-section">
+        <h2>Comentários</h2>
+        <script src="https://utteranc.es/client.js"
+                repo="cliffana/casainteligente"
+                issue-term="pathname"
+                label="comentario"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </section>
+
+    
+    <section class="related-section">
+        <h2>Artigos Relacionados</h2>
+        <div class="grid">
+            
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="/guides/3-vendas-amazon-afiliado/">5 Produtos Casa Inteligente Abaixo de 5€ — Compre Hoje e Comece</a></h3>
+                    <p class="card-meta">26/06/2026 · 2 min</p>
+                    <p>Os produtos smart home mais baratos da Amazon.es. Todos abaixo de 5€ — ideal para começar a sua casa inteligente sem gastar quase nada.</p>
+                    <a href="/guides/3-vendas-amazon-afiliado/" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="/guides/casa-inteligente-100-euros-low-cost/">Casa Inteligente por Menos de 100€ — Guia Low-Cost 2026</a></h3>
+                    <p class="card-meta">24/06/2026 · 4 min</p>
+                    <p>Monte a sua casa inteligente com menos de 100€. Guia prático com orçamento detalhado: lâmpadas, sensores, tomadas e automações passo a passo.</p>
+                    <a href="/guides/casa-inteligente-100-euros-low-cost/" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="/guides/top-5-menos-10-euros/">Top 5 Produtos Casa Inteligente por Menos de 10€ — Guia 2026</a></h3>
+                    <p class="card-meta">24/06/2026 · 2 min</p>
+                    <p>Os melhores produtos smart home por menos de 10€. Tomadas, lâmpadas, sensores e interruptores — automatize a sua casa com pouco dinheiro.</p>
+                    <a href="/guides/top-5-menos-10-euros/" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            
+        </div>
+    </section>
+    
+
+    <nav class="post-nav" aria-label="Anterior">
+        <a href="/guides/top-10-aliexpress-casa-inteligente/" class="post-nav-link prev">← Top 10 Produtos AliExpress para Casa Inteligente — Guia 2026</a>
+        <a href="/guides/top-5-menos-10-euros/" class="post-nav-link next">Top 5 Produtos Casa Inteligente por Menos de 10€ — Guia 2026 →</a>
+    </nav>
+</article>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var canvas = document.getElementById('priceChart');
+    if (!canvas || typeof Chart === 'undefined') return;
+    var data = JSON.parse(canvas.dataset.prices);
+    var name = canvas.dataset.name;
+    if (!data || data.length < 2) return;
+    new Chart(canvas, {
+        type: 'line',
+        data: {
+            labels: data.map(function(p) { return p.date; }),
+            datasets: [{
+                label: 'Preco (EUR)',
+                data: data.map(function(p) { return p.price; }),
+                borderColor: '#6366f1',
+                backgroundColor: function(ctx) {
+                    var chart = ctx.chart;
+                    var area = chart.ctx.createLinearGradient(0, 0, 0, chart.height);
+                    area.addColorStop(0, 'rgba(99,102,241,0.25)');
+                    area.addColorStop(1, 'rgba(99,102,241,0.01)');
+                    return area;
+                },
+                fill: true, tension: 0.4, pointRadius: 4, pointHoverRadius: 7,
+                pointBackgroundColor: '#6366f1', pointBorderColor: '#fff',
+                pointBorderWidth: 2, borderWidth: 2.5,
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: true, aspectRatio: 2,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: '#0f172a', titleColor: '#f1f5f9',
+                    bodyColor: '#f1f5f9', borderColor: '#6366f1',
+                    borderWidth: 1, cornerRadius: 10, padding: 12,
+                    callbacks: { label: function(ctx) { return ctx.parsed.y.toFixed(2) + ' EUR'; } }
+                }
+            },
+            scales: {
+                x: { ticks: { maxTicksLimit: 8, color: '#94a3b8', font: { size: 11 } }, grid: { display: false } },
+                y: { ticks: { color: '#94a3b8', font: { size: 11 }, callback: function(v) { return v.toFixed(2) + ' EUR'; } }, grid: { color: 'rgba(99,102,241,0.06)' } }
+            }
+        }
+    });
+});
+</script>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Casa Inteligente PT</h3>
+                <p>Guias, reviews e comparações de produtos para casa inteligente. Reviews honestas de Amazon Alexa, Google Home, Xiaomi, Aqara e mais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/category/guides/">Guias</a></li>
+                    <li><a href="/category/reviews/">Reviews</a></li>
+                    <li><a href="/category/comparacoes/">Comparações</a></li>
+                    <li><a href="/sobre/">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacidade/">Privacidade</a></li>
+                    <li><a href="/contacto/">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Idioma</h4>
+                <div class="lang-flags">
+                    
+                    <a href="https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/" class="lang-flag active" title="Português" lang="pt">🇵🇹</a>
+                    
+                    <a href="https://cliffana.github.io/casainteligente/es/guides/rotinas-automacao-casa-inteligente/" class="lang-flag " title="Español" lang="es">🇪🇸</a>
+                    
+                    <a href="https://cliffana.github.io/casainteligente/fr/guides/rotinas-automacao-casa-inteligente/" class="lang-flag " title="Français" lang="fr">🇫🇷</a>
+                    
+                    <a href="https://cliffana.github.io/casainteligente/en/guides/rotinas-automacao-casa-inteligente/" class="lang-flag " title="English" lang="en">🇬🇧</a>
+                    
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Receba as melhores promoções de casa inteligente no seu email.</p>
+                <form class="newsletter-form" action="mailto:" method="post" enctype="text/plain">
+                    <input type="email" name="email" placeholder="O seu email" required>
+                    <button type="submit" class="btn btn-small">Subscrever Newsletter</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Telegram</h4>
+                <p class="footer-disclosure">Ofertas diárias de produtos smart home. Junte-se ao nosso canal!</p>
+                <a href="https://t.me/+1L4pIX1kEBwyM2E0" class="btn btn-small" target="_blank" rel="noopener">📱 Entrar no Canal</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p class="footer-disclosure">Este site contém links de afiliados. Poderemos receber uma comissão por compras efetuadas através destes links, sem custo adicional para si.</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Casa Inteligente PT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+
+    <div class="fab-container">
+        <a href="https://t.me/+1L4pIX1kEBwyM2E0" class="fab fab-telegram" target="_blank" rel="noopener" title="Ofertas no Telegram">📱</a>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script>
+    // Progress bar
+    window.addEventListener('scroll',function(){var h=document.documentElement;var s=h.scrollTop;var t=h.scrollHeight-h.clientHeight;var p=(s/t)*100;document.getElementById('progressBar').style.width=p+'%'});
+
+    // Scroll reveal
+    var observer=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.15});
+    document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.card,.section-header,.hero,.price-home-card,.telegram-banner,.stat-box').forEach(function(e){e.classList.add('reveal');observer.observe(e)})});
+
+    // Toast
+    function toast(msg,d){var c=document.getElementById('toastContainer');var t=document.createElement('div');t.className='toast';t.textContent=msg;c.appendChild(t);setTimeout(function(){t.classList.add('removing');setTimeout(function(){t.remove()},400)},d||3000)}
+    setTimeout(function(){toast('Bem-vindo! Boa leitura e diverte-te!',5000)},1500);
+    </script>
+    
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "name": "Casa Inteligente PT",
+    "url": "https://casainteligentept.com",
+    "description": "Aprenda a criar automações inteligentes em casa. Rotinas com Alexa, Google Home e sensores — exemplos práticos para começar hoje.",
+    "headline": "Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026",
+    "datePublished": "2026-06-23",
+    "author": {
+        "@type": "Person",
+        "name": "Equipa Casa Inteligente PT"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Casa Inteligente PT"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/"
+    },
+    "offers": {
+        "@type": "Offer",
+        "price": 19.99,
+        "priceCurrency": "EUR",
+        "url": "https://www.amazon.es/dp/B08QRQQ53T?tag=casainteli0e7-21",
+        "availability": "https://schema.org/InStock"
+    }
+}
+    </script>
+</body>
+</html>

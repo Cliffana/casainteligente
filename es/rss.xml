@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Casa Inteligente ES</title>
+    <link>https://cliffana.github.io/casainteligente/es</link>
+    <description>Guías, reviews y comparaciones de productos para hogar inteligente. Reviews honestas de Amazon Alexa, Google Home, Xiaomi, Aqara y más.</description>
+    <language>es-ES</language>
+    <lastBuildDate>Mon, 27 Jul 2026 09:59:47 -0000</lastBuildDate>
+    <atom:link href="https://cliffana.github.io/casainteligente/es/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Xiaomi vs Tuya: Qual o Melhor Ecossistema para Casa Inteligente?</title>
+      <link>https://cliffana.github.io/casainteligente/es/es/comparaciones/comparacao-xiaomi-vs-tuya/</link>
+      <description>Xiaomi Aqara ou Tuya? Comparamos preço, compatibilidade, qualidade e facilidade de uso dos dois ecossistemas.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate>
+      <guid>https://cliffana.github.io/casainteligente/es/es/comparaciones/comparacao-xiaomi-vs-tuya/</guid>
+    </item>
+    <item>
+      <title>Guia Completo de Casa Inteligente para Iniciantes 2026</title>
+      <link>https://cliffana.github.io/casainteligente/es/es/guides/guia-iniciante-casa-inteligente/</link>
+      <description>Tudo o que precisa para começar a automatizar a sua casa. Dos dispositivos essenciais à configuração passo a passo.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate>
+      <guid>https://cliffana.github.io/casainteligente/es/es/guides/guia-iniciante-casa-inteligente/</guid>
+    </item>
+    <item>
+      <title>Melhores Colunas Inteligentes 2026: Alexa vs Google Nest vs HomePod</title>
+      <link>https://cliffana.github.io/casainteligente/es/es/reviews/melhores-colunas-inteligentes-2026/</link>
+      <description>Comparámos as melhores colunas inteligentes do mercado. Qual a melhor para si? Descubra neste review completo.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate>
+      <guid>https://cliffana.github.io/casainteligente/es/es/reviews/melhores-colunas-inteligentes-2026/</guid>
+    </item>
+  </channel>
+</rss>

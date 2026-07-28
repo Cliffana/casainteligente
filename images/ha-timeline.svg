@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520">
+  <defs>
+    <linearGradient id="gh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00C6FF"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="s">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="700" height="520" fill="#F8FAFC" rx="12"/>
+  <text x="350" y="32" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0F172A">12 Semanas para a Casa Inteligente</text>
+  <!-- Vertical line -->
+  <line x1="80" y1="55" x2="80" y2="490" stroke="#2563EB" stroke-width="3" stroke-dasharray="6,4"/>
+  <!-- Week 1 (active) -->
+  <g transform="translate(0,0)">
+    <circle cx="80" cy="75" r="14" fill="url(#gh)" filter="url(#s)"/>
+    <text x="80" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">1</text>
+    <rect x="110" y="60" width="560" height="30" rx="6" fill="url(#gh)" filter="url(#s)"/>
+    <text x="390" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white">O que é o Home Assistant</text>
+  </g>
+  <g transform="translate(0,105)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">2</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Instalar o HA OS no Raspberry Pi 4</text>
+  </g>
+  <g transform="translate(0,142)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">3</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Primeiro Arranque e Configuração Inicial</text>
+  </g>
+  <g transform="translate(0,179)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">4</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Navegar na Interface — O Teu Primeiro Dashboard</text>
+  </g>
+  <g transform="translate(0,216)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">5</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Primeiros Dispositivos (Lâmpadas, Tomadas, Sensores)</text>
+  </g>
+  <g transform="translate(0,253)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">6</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Criar Automações — A Casa Começa a Ser Inteligente</text>
+  </g>
+  <g transform="translate(0,290)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">7</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Dashboards Profissionais — Lovelace, Cards, Temas</text>
+  </g>
+  <g transform="translate(0,327)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">8</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Segurança — Câmaras, Alarmes, Sensores de Porta</text>
+  </g>
+  <g transform="translate(0,364)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">9</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Acesso Remoto Seguro — VPN, Nabu Casa, DuckDNS</text>
+  </g>
+  <g transform="translate(0,401)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">10</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Câmaras e Sensores Avançados</text>
+  </g>
+  <g transform="translate(0,438)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">11</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Monitorização de Energia</text>
+  </g>
+  <g transform="translate(0,475)">
+    <circle cx="80" cy="8" r="10" fill="#CBD5E1"/>
+    <text x="80" y="12" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">12</text>
+    <rect x="110" y="0" width="560" height="25" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="390" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Manutenção, Backups e Atualizações</text>
+  </g>
+</svg>

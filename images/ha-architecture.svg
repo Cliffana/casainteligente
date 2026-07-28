@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00C6FF"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="s">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="#F8FAFC" rx="12"/>
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#0F172A">Arquitetura do Home Assistant</text>
+  <!-- HA Core Box -->
+  <rect x="200" y="55" width="400" height="150" rx="12" fill="url(#g2)" filter="url(#s)"/>
+  <text x="400" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Home Assistant Core</text>
+  <!-- Integracoes -->
+  <rect x="220" y="95" width="170" height="90" rx="8" fill="#1E293B" stroke="#00C6FF" stroke-width="1.5"/>
+  <text x="305" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#00C6FF">Integrações</text>
+  <text x="305" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94A3B8">Xiaomi, Tuya, Zigbee</text>
+  <text x="305" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94A3B8">MQTT, Z-Wave, WiFi</text>
+  <text x="305" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94A3B8">+2000 disponíveis</text>
+  <!-- Automacoes -->
+  <rect x="410" y="95" width="170" height="90" rx="8" fill="#1E293B" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="495" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#2563EB">Motor de Regras</text>
+  <text x="495" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94A3B8">Automações</text>
+  <text x="495" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94A3B8">Scripts</text>
+  <text x="495" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94A3B8">Cenas / Blueprints</text>
+  <!-- Middle arrow -->
+  <text x="400" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#64748B">▼</text>
+  <!-- Dashboards -->
+  <rect x="150" y="240" width="500" height="100" rx="12" fill="url(#g1)" filter="url(#s)"/>
+  <text x="400" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Dashboards Lovelace</text>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.85)">Visão Geral  •  Quartos  •  Energia  •  Câmaras  •  Sistema</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.85)">Telemóvel  •  Tablet  •  PC  •  Kiosk</text>
+  <!-- Bottom arrow -->
+  <text x="400" y="363" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#64748B">▼</text>
+  <!-- Devices -->
+  <rect x="75" y="375" width="650" height="105" rx="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="400" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#475569">Dispositivos Físicos</text>
+  <!-- Device icons (text-based) -->
+  <g transform="translate(100,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">Lâmpadas</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">WiFi/Zigbee</text>
+  </g>
+  <g transform="translate(185,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">Sensores</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">Temp/Mov/Porta</text>
+  </g>
+  <g transform="translate(270,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">Câmaras</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">IP/RTSP/P2P</text>
+  </g>
+  <g transform="translate(355,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">Tomadas</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">Consumo</text>
+  </g>
+  <g transform="translate(440,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">Estores</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">Motorizados</text>
+  </g>
+  <g transform="translate(525,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">Clima</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">AC/Aquecedor</text>
+  </g>
+  <g transform="translate(610,415)">
+    <rect x="0" y="0" width="65" height="48" rx="6" fill="#2563EB"/>
+    <text x="32" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="white">TV/Media</text>
+    <text x="32" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#93C5FD">HDMI CEC</text>
+  </g>
+</svg>

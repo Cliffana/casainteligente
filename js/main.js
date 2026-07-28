@@ -76,4 +76,65 @@ document.addEventListener('DOMContentLoaded', function() {
             } catch(err) {}
         });
     });
+
+    // ---- Geo-aware affiliate links ----
+    // US → amazon.com (casaintel0c20-20)
+    // FR → amazon.fr / DE → amazon.de (mesmo tag ES: casainteli0e7-21)
+    // Resto → amazon.es (casainteli0e7-21)
+    var MARKETPLACES = {
+        'US': { domain: 'amazon.com', tag: 'casaintel0c20-20' },
+        'FR': { domain: 'amazon.fr', tag: 'casainteli0e7-21' },
+        'DE': { domain: 'amazon.de', tag: 'casainteli0e7-21' },
+        'default': { domain: 'amazon.es', tag: 'casainteli0e7-21' },
+    };
+
+    function getCountryFromLocale() {
+        var lang = navigator.language || navigator.userLanguage || '';
+        if (lang === 'fr' || lang.startsWith('fr-')) return 'FR';
+        if (lang === 'de' || lang.startsWith('de-')) return 'DE';
+        if (lang.endsWith('-US')) return 'US';
+        if (lang === 'en' || lang.startsWith('en-')) return 'US';
+        return null;
+    }
+
+    function getMarketplace(country) {
+        return MARKETPLACES[country] || MARKETPLACES['default'];
+    }
+
+    function rewriteAffiliateLinks(mp) {
+        var es_domain = 'amazon.es';
+        var es_tag = 'casainteli0e7-21';
+        document.querySelectorAll('a[href*="' + es_domain + '"]').forEach(function(a) {
+            a.href = a.href
+                .replace(es_domain, mp.domain)
+                .replace(es_tag, mp.tag);
+        });
+    }
+
+    function applyGeo() {
+        var cached = localStorage.getItem('geo_marketplace');
+        if (cached) {
+            rewriteAffiliateLinks(getMarketplace(cached));
+            return;
+        }
+
+        var fromLocale = getCountryFromLocale();
+        if (fromLocale) {
+            localStorage.setItem('geo_marketplace', fromLocale);
+            rewriteAffiliateLinks(getMarketplace(fromLocale));
+        }
+
+        // Async IP check for accuracy
+        fetch('https://ipapi.co/json/')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var country = data.country_code;
+                if (!country) return;
+                localStorage.setItem('geo_marketplace', country);
+                rewriteAffiliateLinks(getMarketplace(country));
+            })
+            .catch(function() {});
+    }
+
+    applyGeo();
 });

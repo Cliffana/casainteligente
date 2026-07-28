@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420">
+  <defs>
+    <linearGradient id="gh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="s">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="750" height="420" fill="#F8FAFC" rx="12"/>
+  <text x="375" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0F172A">Comparação: Plataformas de Casa Inteligente</text>
+  <!-- Header row -->
+  <rect x="20" y="45" width="170" height="35" rx="6" fill="#0F172A"/>
+  <text x="105" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white">Característica</text>
+  <rect x="200" y="45" width="120" height="35" rx="6" fill="#64748B"/>
+  <text x="260" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">Google Home</text>
+  <rect x="330" y="45" width="120" height="35" rx="6" fill="#64748B"/>
+  <text x="390" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">Alexa</text>
+  <rect x="460" y="45" width="120" height="35" rx="6" fill="#64748B"/>
+  <text x="520" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">HomeKit</text>
+  <rect x="590" y="45" width="140" height="35" rx="6" fill="url(#gh)"/>
+  <text x="660" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">Home Assistant</text>
+  <!-- Row template -->
+  <g transform="translate(0,0)">
+    <!-- Row 1: Preço -->
+    <rect x="20" y="88" width="170" height="35" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Preço</text>
+    <rect x="200" y="88" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">Grátis</text>
+    <rect x="330" y="88" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">Grátis</text>
+    <rect x="460" y="88" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">Grátis</text>
+    <rect x="590" y="88" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#2563EB">Grátis</text>
+    <!-- Row 2: Open-source -->
+    <rect x="20" y="127" width="170" height="35" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Open-source</text>
+    <rect x="200" y="127" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#DC2626">✘</text>
+    <rect x="330" y="127" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#DC2626">✘</text>
+    <rect x="460" y="127" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#DC2626">✘</text>
+    <rect x="590" y="127" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#2563EB">✔</text>
+    <!-- Row 3: Funciona localmente -->
+    <rect x="20" y="166" width="170" height="35" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Funciona localmente</text>
+    <rect x="200" y="166" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Parcial</text>
+    <rect x="330" y="166" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#DC2626">Não</text>
+    <rect x="460" y="166" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Parcial</text>
+    <rect x="590" y="166" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#2563EB">Sim (total)</text>
+    <!-- Row 4: Dispositivos +2000 -->
+    <rect x="20" y="205" width="170" height="35" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#334155">Dispositivos suportados</text>
+    <rect x="200" y="205" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#DC2626">~50 marcas</text>
+    <rect x="330" y="205" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#DC2626">~100 marcas</text>
+    <rect x="460" y="205" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#DC2626">~30 marcas</text>
+    <rect x="590" y="205" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB">+2000 integrações</text>
+    <!-- Row 5: Automacoes avancadas -->
+    <rect x="20" y="244" width="170" height="35" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Automações avançadas</text>
+    <rect x="200" y="244" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Básicas</text>
+    <rect x="330" y="244" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Médias</text>
+    <rect x="460" y="244" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Básicas</text>
+    <rect x="590" y="244" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#2563EB">Ilimitadas</text>
+    <!-- Row 6: Privacidade -->
+    <rect x="20" y="283" width="170" height="35" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Privacidade</text>
+    <rect x="200" y="283" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#DC2626">Má</text>
+    <rect x="330" y="283" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#DC2626">Má</text>
+    <rect x="460" y="283" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">Boa</text>
+    <rect x="590" y="283" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#2563EB">Excelente</text>
+    <!-- Row 7: Mensalidade -->
+    <rect x="20" y="322" width="170" height="35" rx="4" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Mensalidade</text>
+    <rect x="200" y="322" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">€0</text>
+    <rect x="330" y="322" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">€0</text>
+    <rect x="460" y="322" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#16A34A">€0</text>
+    <rect x="590" y="322" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#2563EB">€0</text>
+    <!-- Row 8: Customização -->
+    <rect x="20" y="361" width="170" height="35" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="105" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#334155">Customização</text>
+    <rect x="200" y="361" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="260" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Mínima</text>
+    <rect x="330" y="361" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="390" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Mínima</text>
+    <rect x="460" y="361" width="120" height="35" rx="4" fill="#F8FAFC"/>
+    <text x="520" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#CA8A04">Média</text>
+    <rect x="590" y="361" width="140" height="35" rx="4" fill="#EFF6FF"/>
+    <text x="660" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#2563EB">Total</text>
+  </g>
+</svg>

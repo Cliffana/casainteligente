@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://cliffana.github.io/casainteligente/en/sitemap.xml
+Sitemap: https://casainteligentept.com/en/sitemap.xml

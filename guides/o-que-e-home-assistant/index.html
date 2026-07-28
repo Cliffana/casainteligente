@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="D5NstmvIUgjJ7cWCicbDu8hWl0Ssci3wzZ9VO9lpotw" />
+    <title>Semana 1 — O que é o Home Assistant? — Casa Inteligente PT</title>
+    <meta name="description" content="O cérebro da tua Casa Inteligente. Descobre o que é o Home Assistant, porque deves escolhê-lo e como vai transformar a tua casa num ecossistema inteligente, privado e 100% teu.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="casa inteligente, domotica, smart home, amazon alexa, google home, automacao residencial, iot, produtos inteligentes">
+    <link rel="canonical" href="https://casainteligentept.com/guides/o-que-e-home-assistant/">
+    
+    <link rel="alternate" hreflang="pt" href="https://casainteligentept.com/guides/o-que-e-home-assistant/">
+    
+    <link rel="alternate" hreflang="es" href="https://casainteligentept.com/es/guides/o-que-e-home-assistant/">
+    
+    <link rel="alternate" hreflang="fr" href="https://casainteligentept.com/fr/guides/o-que-e-home-assistant/">
+    
+    <link rel="alternate" hreflang="en" href="https://casainteligentept.com/en/guides/o-que-e-home-assistant/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://casainteligentept.com/guides/o-que-e-home-assistant/">
+    <meta property="og:title" content="Semana 1 — O que é o Home Assistant?">
+    <meta property="og:description" content="O cérebro da tua Casa Inteligente. Descobre o que é o Home Assistant, porque deves escolhê-lo e como vai transformar a tua casa num ecossistema inteligente, privado e 100% teu.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://casainteligentept.com/guides/o-que-e-home-assistant/">
+    <meta property="og:site_name" content="Casa Inteligente PT">
+    <meta property="og:image" content="https://casainteligentept.com/images/logo-horizontal.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://casainteligentept.com/images/logo-horizontal.svg">
+    <meta name="pinterest-rich-pin" content="true">
+    <meta name="twitter:title" content="Casa Inteligente PT">
+    <meta name="twitter:description" content="Guias, reviews e comparações de produtos para casa inteligente. Reviews honestas de Amazon Alexa, Google Home, Xiaomi, Aqara e mais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/images/LOGO.svg">
+    <link rel="apple-touch-icon" href="/images/LOGO.svg">
+    <meta name="theme-color" content="#1a6d73">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/rss+xml" title="Casa Inteligente PT" href="/rss.xml">
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Semana 1 \u2014 O que \u00e9 o Home Assistant?",
+  "description": "O c\u00e9rebro da tua Casa Inteligente. Descobre o que \u00e9 o Home Assistant, porque deves escolh\u00ea-lo e como vai transformar a tua casa num ecossistema inteligente, privado e 100% teu.",
+  "datePublished": "2026-07-21",
+  "author": {"@type": "Person", "name": "Equipa Casa Inteligente PT"},
+  "publisher": {"@type": "Organization", "name": "Casa Inteligente PT"},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://casainteligentept.com/guides/o-que-e-home-assistant/"}
+  
+}
+</script>
+
+
+    <script data-goatcounter="https://casainteligente.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+
+    <div class="progress-bar" id="progressBar"></div>
+    <header class="header">
+        <nav class="nav container" aria-label="Início">
+            <a href="/" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="display:block">
+                        <path d="M256 72 L96 210 V416 H416 V210 Z" fill="none" stroke="white" stroke-width="22" stroke-linejoin="round"/>
+                        <path d="M184 208 Q256 150 328 208" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+                        <path d="M206 238 Q256 198 306 238" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+                        <path d="M228 266 Q256 244 284 266" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+                        <circle cx="256" cy="295" r="12" fill="white"/>
+                        <rect x="226" y="315" width="60" height="100" rx="10" fill="white"/>
+                    </svg>
+                </span>
+                Casa Inteligente PT
+            </a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" >Início</a></li>
+                <li><a href="/category/guides/" class="active">Guias</a></li>
+                <li><a href="/category/reviews/" >Reviews</a></li>
+                <li><a href="/category/comparacoes/" >Comparações</a></li>
+                <li><a href="/sobre/" >Sobre</a></li>
+                <li><a href="/precos/" >💰 Preços</a></li>
+                <li class="nav-lang-dropdown">
+                    <a href="#" class="lang-toggle" onclick="event.preventDefault(); this.nextElementSibling.classList.toggle('open')">Idioma ▾</a>
+                    <ul class="lang-dropdown">
+                        
+                        <li><a href="https://casainteligentept.com/guides/o-que-e-home-assistant/" class="active">🇵🇹 Português</a></li>
+                        
+                        <li><a href="https://casainteligentept.com/es/guides/o-que-e-home-assistant/" >🇪🇸 Español</a></li>
+                        
+                        <li><a href="https://casainteligentept.com/fr/guides/o-que-e-home-assistant/" >🇫🇷 Français</a></li>
+                        
+                        <li><a href="https://casainteligentept.com/en/guides/o-que-e-home-assistant/" >🇬🇧 English</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main container">
+        
+<article class="article">
+    <header class="article-header">
+        <div class="article-image">
+            
+            <img src="/images/semana1-1.png" alt="Semana 1 — O que é o Home Assistant?" loading="lazy">
+            
+        </div>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <a href="/">Início</a>
+            <span class="sep">/</span>
+            <a href="/category/guides/">Guias</a>
+            <span class="sep">/</span>
+            <span>Semana 1 — O que é o Home Assistant?</span>
+        </nav>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://casainteligentept.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Guias", "item": "https://casainteligentept.com/category/guides/"},
+            {"@type": "ListItem", "position": 3, "name": "Semana 1 \u2014 O que \u00e9 o Home Assistant?", "item": "https://casainteligentept.com/guides/o-que-e-home-assistant/"}
+          ]
+        }
+        </script>
+
+        <h1>Semana 1 — O que é o Home Assistant?</h1>
+        <div class="article-meta">
+            <span class="meta-calendar">21/07/2026</span>
+            <span class="meta-clock">7 min de leitura</span>
+            
+            
+        </div>
+        
+        <p class="article-excerpt">O cérebro da tua Casa Inteligente. Descobre o que é o Home Assistant, porque deves escolhê-lo e como vai transformar a tua casa num ecossistema inteligente, privado e 100% teu.</p>
+        
+    </header>
+
+    
+    <div class="media-section">
+        <div class="media-title">&#127916; Ver e Ouvir o Artigo</div>
+        <div class="lang-tabs" id="langTabs">
+            <button class="lang-tab" onclick="switchMediaLang('pt')">&#127477;&#127479; Portugu&ecirc;s</button>
+            <button class="lang-tab" onclick="switchMediaLang('en')">&#127468;&#127463; English</button>
+            <button class="lang-tab" onclick="switchMediaLang('es')">&#127466;&#127480; Espa&ntilde;ol</button>
+            <button class="lang-tab" onclick="switchMediaLang('fr')">&#127467;&#127479; Fran&ccedil;ais</button>
+        </div>
+        
+        
+        <div class="media-panel" id="media-pt" style="display:block">
+            
+            <span class="media-label">&#127910; V&iacute;deo — O Guia da Casa Inteligente</span>
+            <div class="media-player">
+                <video controls poster="/images/semana1-1.png">
+                    <source src="/media/pt/O_Guia_da_Casa_Inteligente.mp4" type="video/mp4">
+                    browser_no_video
+                </video>
+            </div>
+            
+            
+            <span class="media-label">&#127911; Resumo — Liberte a sua casa da nuvem</span>
+            <div class="media-player">
+                <audio controls>
+                    <source src="/media/pt/Liberte_a_sua_casa_da_nuvem.m4a" type="audio/mp4">
+                    browser_no_audio
+                </audio>
+            </div>
+            
+            <p class="media-desc">36 min — Explicação detalhada em português de Portugal</p>
+            
+        </div>
+        
+        <div class="media-panel" id="media-en">
+            
+            <span class="media-label">&#127910; V&iacute;deo — The Universal Brain</span>
+            <div class="media-player">
+                <video controls>
+                    <source src="/media/en/The_Universal_Brain.mp4" type="video/mp4">
+                    browser_no_video
+                </video>
+            </div>
+            
+            
+            <span class="media-label">&#127911; Resumo — Escape the Cloud With Home Assistant</span>
+            <div class="media-player">
+                <audio controls>
+                    <source src="/media/en/Escape_the_Cloud_With_Home_Assistant.m4a" type="audio/mp4">
+                    browser_no_audio
+                </audio>
+            </div>
+            
+            <p class="media-desc">37 min — Detailed explanation in English</p>
+            
+        </div>
+        
+        <div class="media-panel" id="media-es">
+            
+            <span class="media-label">&#127910; V&iacute;deo — Home Assistant: El Cerebro</span>
+            <div class="media-player">
+                <video controls>
+                    <source src="/media/es/Home_Assistant__El_Cerebro.mp4" type="video/mp4">
+                    browser_no_video
+                </video>
+            </div>
+            
+            
+            <span class="media-label">&#127911; Resumo — Domótica sin nube con Home Assistant</span>
+            <div class="media-player">
+                <audio controls>
+                    <source src="https://github.com/Cliffana/casainteligente/releases/download/media-1784890985/Dom%C3%B3tica_sin_nube_con_Home_Assistant.m4a" type="audio/mp4">
+                    browser_no_audio
+                </audio>
+            </div>
+            
+            <p class="media-desc">46 min — Explicación detallada en español</p>
+            
+        </div>
+        
+        <div class="media-panel" id="media-fr">
+            
+            
+            <span class="media-label">&#127911; Resumo — Reprenez le contrôle avec Home Assistant</span>
+            <div class="media-player">
+                <audio controls>
+                    <source src="https://github.com/Cliffana/casainteligente/releases/download/media-1784890985/Reprenez_le_contr%C3%B4le_avec_Home_Assistant.m4a" type="audio/mp4">
+                    browser_no_audio
+                </audio>
+            </div>
+            
+            <p class="media-desc">43 min — Explication détaillée en français</p>
+            
+            <div class="media-warning">&#9888;&#65039; V&iacute;deo em produ&ccedil;&atilde;o para Fran&ccedil;&#43;ais — dispon&iacute;vel em breve.</div>
+            
+        </div>
+        
+    </div>
+
+    <style>
+    .media-section { background: #fff; border-radius: 16px; margin: 24px 0; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .media-title { font-size: 18px; font-weight: 700; color: #0F172A; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .lang-tabs { display: flex; gap: 4px; background: #F1F5F9; padding: 4px; border-radius: 10px; margin-bottom: 20px; }
+    .lang-tab { flex: 1; padding: 10px 16px; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; color: #64748B; background: transparent; transition: all .2s; }
+    .lang-tab:hover { color: #2563EB; }
+    .lang-tab.active { background: #2563EB; color: #fff; box-shadow: 0 2px 8px rgba(37,99,235,0.3); }
+    .media-panel { display: none; }
+    .media-panel.active { display: block; }
+    .media-player { width: 100%; border-radius: 10px; margin-bottom: 16px; background: #0F172A; }
+    .media-player video { width: 100%; border-radius: 10px; display: block; max-height: 480px; }
+    .media-player audio { width: 100%; border-radius: 8px; }
+    .media-desc { font-size: 14px; color: #64748B; margin-top: 8px; }
+    .media-label { display: block; font-size: 12px; font-weight: 600; color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; margin-top: 16px; }
+    .media-label:first-of-type { margin-top: 0; }
+    .media-warning { background: #FEF3C7; border: 1px solid #FBBF24; border-radius: 10px; padding: 12px 16px; margin-top: 12px; font-size: 14px; color: #92400E; }
+    @media (max-width: 640px) {
+        .lang-tabs { flex-wrap: wrap; }
+        .lang-tab { font-size: 12px; padding: 8px 10px; }
+    }
+    </style>
+    <script>
+    function switchMediaLang(lang) {
+        document.querySelectorAll('.lang-tab').forEach(function(t){ t.classList.remove('active'); });
+        document.querySelectorAll('.media-panel').forEach(function(p){ p.classList.remove('active'); });
+        var tab = document.querySelector('.lang-tab[onclick*="'+lang+'"]');
+        if (tab) tab.classList.add('active');
+        var panel = document.getElementById('media-'+lang);
+        if (panel) panel.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        var active = document.querySelector('.media-panel[style*="display:block"]');
+        if (active) active.classList.add('active');
+        else {
+            var first = document.querySelector('.media-panel');
+            var firstTab = document.querySelector('.lang-tab');
+            if (first) first.classList.add('active');
+            if (firstTab) firstTab.classList.add('active');
+        }
+    });
+    </script>
+    
+
+    
+
+    <nav class="toc" aria-label="Índice">
+        <strong>Índice</strong>
+        <div id="toc"></div>
+    </nav>
+
+    <div class="article-content">
+        <h2 id="introducao">Introdução</h2>
+<p>Já imaginaste ter uma casa que <strong>sabe</strong> quando chegas, acende as luzes no tom certo, ajusta a temperatura, fecha os estores, e até te avisa se há uma fuga de água? Parece ficção científica, mas é mais simples do que pensas.</p>
+<p>O problema é que o mercado de casa inteligente está cheio de <strong>sistemas fechados</strong>. Tens uma lâmpada Xiaomi que só funciona na app Mi Home. Uma tomada Tuya que só obedece à app Smart Life. Um sensor Aqara que precisa do seu próprio hub. Resultado: tens 5 apps no telemóvel, nenhum dispositivo fala com o outro, e a "casa inteligente" é tudo menos inteligente.</p>
+<p>É aqui que entra o <strong>Home Assistant</strong> (HA).</p>
+<p>!<a href="/images/semana1-1.png">Interface Lovelace com dashboards de clima, temperatura, controlos rápidos e sensores</a>
+<em>Interface Lovelace — clima, temperatura, controlos rápidos, sensores de porta, câmaras e energia.</em></p>
+<hr />
+<h2 id="o-que-e-o-home-assistant">O que é o Home Assistant?</h2>
+<p>O Home Assistant é um <strong>software open-source</strong> que funciona como o sistema operativo da tua casa inteligente. Pensa nele como um <strong>hub universal</strong> — uma plataforma que junta todos os teus dispositivos, independentemente da marca, e permite controlá-los todos a partir de um único sítio.</p>
+<h3 id="as-promessas-do-ha">As promessas do HA</h3>
+<ul>
+<li><strong>Privacidade primeiro</strong>: tudo funciona localmente na tua rede. Sem nuvens, sem empresas a recolher os teus dados</li>
+<li><strong>Qualquer dispositivo</strong>: mais de <strong>2000 integrações</strong> — Xiaomi, Tuya, Philips Hue, Sonoff, Shelly, Zigbee, Z-Wave, WiFi, Bluetooth...</li>
+<li><strong>Sem mensalidades</strong>: é 100% gratuito</li>
+<li><strong>Controlo total</strong>: fazes o que queres, como queres</li>
+</ul>
+<h3 id="open-source-significa-o-que">Open-source significa o quê?</h3>
+<p>O código do Home Assistant é público. Isto significa que não há portas traseiras escondidas, não há publicidade nem venda de dados, milhares de programadores contribuem para o tornar melhor todos os dias, e é atualizado regularmente (nova versão todos os meses).</p>
+<hr />
+<h2 id="porque-escolher-o-home-assistant">Porquê escolher o Home Assistant?</h2>
+<h3 id="vs-google-home-alexa-apple-homekit">Vs. Google Home / Alexa / Apple HomeKit</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Google Home</th>
+<th>Alexa</th>
+<th>HomeKit</th>
+<th><strong>Home Assistant</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gratuito</td>
+<td>Sim</td>
+<td>Sim</td>
+<td>Sim</td>
+<td><strong>Sim</strong></td>
+</tr>
+<tr>
+<td>Open-source</td>
+<td>Não</td>
+<td>Não</td>
+<td>Não</td>
+<td><strong>Sim</strong></td>
+</tr>
+<tr>
+<td>Funciona localmente</td>
+<td>Parcial</td>
+<td>Não</td>
+<td>Parcial</td>
+<td><strong>Sim (total)</strong></td>
+</tr>
+<tr>
+<td>Dispositivos suportados</td>
+<td>~50 marcas</td>
+<td>~100 marcas</td>
+<td>~30 marcas</td>
+<td><strong>+2000 integrações</strong></td>
+</tr>
+<tr>
+<td>Automações avançadas</td>
+<td>Básicas</td>
+<td>Médias</td>
+<td>Básicas</td>
+<td><strong>Ilimitadas</strong></td>
+</tr>
+<tr>
+<td>Privacidade</td>
+<td>Má</td>
+<td>Má</td>
+<td>Boa</td>
+<td><strong>Excelente</strong></td>
+</tr>
+<tr>
+<td>Necessita internet</td>
+<td>Sim</td>
+<td>Sim</td>
+<td>Parcial</td>
+<td><strong>Não</strong></td>
+</tr>
+<tr>
+<td>Customização</td>
+<td>Mínima</td>
+<td>Mínima</td>
+<td>Média</td>
+<td><strong>Total</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="o-problema-das-nuvens">O problema das nuvens</h3>
+<p>Quando usas Google Home ou Alexa, cada comando de luz segue este caminho:</p>
+<pre class="codehilite"><code>Telemóvel → Router → Servidores Google/EUA → Router → Lâmpada
+</code></pre>
+
+<p>Se a internet cair, o interruptor inteligente é só um pedaço de plástico. Com o Home Assistant, tudo fica dentro de casa:</p>
+<pre class="codehilite"><code>Telemóvel → Router → Raspberry Pi (com HA) → Lâmpada
+Sem internet? Funciona na mesma.
+</code></pre>
+
+<p>!<a href="/images/semana1-4.png">Fluxo Local vs Nuvem</a>
+<em>Comando local vs comando na nuvem — com HA a fiabilidade é total.</em></p>
+<hr />
+<h2 id="o-que-podes-fazer-com-o-home-assistant">O que podes fazer com o Home Assistant?</h2>
+<h3 id="controlo-de-iluminacao">Controlo de iluminação</h3>
+<ul>
+<li>Acender luzes automaticamente ao anoitecer</li>
+<li>Simular presença quando estás de férias</li>
+<li>Criar "cenas" — um botão "Cinema" desliga luzes, fecha estores e liga a TV</li>
+<li>Temperatura de cor automática (fria de manhã, quente à noite)</li>
+</ul>
+<h3 id="clima-e-conforto">Clima e conforto</h3>
+<ul>
+<li>Termostato inteligente que aprende a tua rotina</li>
+<li>Ventilação automática baseada na humidade</li>
+<li>Aquecimento ligado quando a temperatura desce</li>
+</ul>
+<h3 id="seguranca">Segurança</h3>
+<ul>
+<li>Câmaras que gravam só com movimento</li>
+<li>Sensor de porta que notifica se alguém abriu quando não estás</li>
+<li>Detetor de fumo que desliga o gás automaticamente</li>
+<li>Alarme que liga quando sais</li>
+</ul>
+<h3 id="energia">Energia</h3>
+<ul>
+<li>Monitorização de consumo em tempo real</li>
+<li>Alertas se o consumo ultrapassar um limite</li>
+<li>Painel solar + bateria: gerir carga e uso</li>
+<li>Comparação de gastos dia-a-dia</li>
+</ul>
+<h3 id="automatizacoes-do-dia-a-dia">Automatizações do dia-a-dia</h3>
+<ul>
+<li>"Bom dia": estores abrem, café liga, rádio liga</li>
+<li>"Saí de casa": tudo desliga, alarme liga, aspirador começa</li>
+<li>"Dormir": luzes desvanecem, portas trancam, temperatura baixa</li>
+</ul>
+<hr />
+<h2 id="como-funciona-o-home-assistant">Como funciona o Home Assistant?</h2>
+<h3 id="arquitetura-simplificada">Arquitetura simplificada</h3>
+<pre class="codehilite"><code>┌─────────────────────────────────────────┐
+│            Home Assistant                │
+│  ┌─────────┐ ┌─────────┐ ┌──────────┐   │
+│  │Integrações│ │Automações│ │Dashboards│   │
+│  │  Xiaomi  │ │ Se...   │ │  Visão   │   │
+│  │  Tuya    │ │ Então... │ │  Quartos │   │
+│  │  Zigbee  │ │ Scripts  │ │ Energia  │   │
+│  └────┬────┘ └─────────┘ └──────────┘   │
+└───────┼──────────────────────────────────┘
+        ▼
+┌─────────────────────────────────────────┐
+│        Dispositivos Físicos             │
+│  Lâmpadas │ Sensores │ Câmaras │ TVs    │
+└─────────────────────────────────────────┘
+</code></pre>
+
+<ol>
+<li><strong>Integrações</strong> — ligam o HA aos teus dispositivos</li>
+<li><strong>Entidades</strong> — cada sensor, luz, interruptor, etc. é uma "entidade"</li>
+<li><strong>Automações</strong> — regras do tipo "se [X], então [Y]"</li>
+<li><strong>Dashboards</strong> — os ecrãs que vês no telemóvel, tablet ou PC</li>
+</ol>
+<h3 id="onde-corre-o-ha">Onde corre o HA?</h3>
+<p>O Home Assistant é um servidor que precisa de estar ligado 24/7:</p>
+<ul>
+<li><strong>Raspberry Pi</strong> (recomendado) — ~50€, consome 5W</li>
+<li>Um PC velho em casa</li>
+<li>Um servidor NAS (Synology, QNAP)</li>
+<li>Um servidor dedicado (Intel NUC, HP ProDesk)</li>
+</ul>
+<hr />
+<h2 id="porque-o-raspberry-pi">Porquê o Raspberry Pi?</h2>
+<table>
+<thead>
+<tr>
+<th>Razão</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preço</strong></td>
+<td>~50€ para o Pi, 10€ para a fonte</td>
+</tr>
+<tr>
+<td><strong>Consumo</strong></td>
+<td>5-7W — menos de 5€/ano 24h/dia</td>
+</tr>
+<tr>
+<td><strong>Silêncio</strong></td>
+<td>Sem ventoinha</td>
+</tr>
+<tr>
+<td><strong>Tamanho</strong></td>
+<td>Cartão de crédito</td>
+</tr>
+<tr>
+<td><strong>Comunidade</strong></td>
+<td>Milhares de tutoriais e fóruns</td>
+</tr>
+<tr>
+<td><strong>Facilidade</strong></td>
+<td>Instalação em 15 minutos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hardware-obrigatorio">Hardware Obrigatório</h3>
+<p>Precisa de hardware dedicado. O mínimo recomendado é:</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Recomendado</th>
+<th>Preço</th>
+<th>Link Amazon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Raspberry Pi 5</strong></td>
+<td>4GB+ RAM</td>
+<td>~70-90€</td>
+<td><a href="https://www.amazon.es/dp/B0CTQ8JGBC?tag=casainteli0e7-21">Ver Preço</a></td>
+</tr>
+<tr>
+<td><strong>SSD</strong> (via USB 3.0)</td>
+<td>128GB+</td>
+<td>~15-25€</td>
+<td><a href="https://www.amazon.es/dp/B0BCT2HPJ4?tag=casainteli0e7-21">Ver Preço</a></td>
+</tr>
+<tr>
+<td><strong>Fonte de alimentação</strong></td>
+<td>Oficial RPi 5 (27W USB-C)</td>
+<td>~12-15€</td>
+<td><a href="https://www.amazon.es/dp/B0CTH7QCKN?tag=casainteli0e7-21">Ver Preço</a></td>
+</tr>
+<tr>
+<td><strong>Cartão microSD</strong></td>
+<td>Apenas para boot inicial</td>
+<td>~8€</td>
+<td><a href="https://www.amazon.es/dp/B09X7C7LBZ?tag=casainteli0e7-21">Ver Preço</a></td>
+</tr>
+<tr>
+<td><strong>Zigbee dongle</strong> (opcional)</td>
+<td>Sonoff ZBDongle-P</td>
+<td>~25-35€</td>
+<td><a href="https://www.amazon.es/dp/B09YQ2H6K3?tag=casainteli0e7-21">Ver Preço</a></td>
+</tr>
+<tr>
+<td><strong>Hub Aqara M2</strong> (opcional)</td>
+<td>Para sensores Aqara</td>
+<td>~40-50€</td>
+<td><a href="https://www.amazon.es/dp/B08D3DP8LY?tag=casainteli0e7-21">Ver Preço</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Total</strong>: ~100-180€ de investimento inicial (com opcionais). Podes começar só com o Pi, SSD e fonte — na Semana 5 adicionamos sensores Zigbee.</p>
+</blockquote>
+<p>Na <strong>Semana 2</strong>, vamos instalar o Home Assistant OS no Raspberry Pi.</p>
+<hr />
+<h2 id="o-que-vamos-aprender-nas-proximas-semanas">O que vamos aprender nas próximas semanas?</h2>
+<p>12 semanas, cada uma a construir sobre a anterior:</p>
+<table>
+<thead>
+<tr>
+<th>Semana</th>
+<th>Tema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>O que é o HA</strong> (estás aqui)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Instalar HA OS no Raspberry Pi</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Primeiro arranque e configuração inicial</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Navegar na interface</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Primeiros dispositivos</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Criar automações</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Dashboards profissionais</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Segurança</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Acesso remoto</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Câmaras e sensores</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Monitorização de energia</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Manutenção e backups</td>
+</tr>
+</tbody>
+</table>
+<p>Ao fim de 12 semanas, tens uma casa inteligente <strong>completa</strong>, <strong>privada</strong> e <strong>tua</strong>.</p>
+<hr />
+<h2 id="conclusao">Conclusão</h2>
+<p>O Home Assistant é a plataforma de casa inteligente mais poderosa que existe. Gratuita, privada, open-source, funciona com praticamente qualquer dispositivo.</p>
+<p>Sim, no início parece intimidante. Mas prometo-te: se eu consegui, tu também consegues. E vais aprender tudo aqui, passo a passo.</p>
+<p>Na <strong>Semana 2</strong>, vamos instalar o Home Assistant OS no teu Raspberry Pi. Prepara o cartão SD e a fonte de alimentação.</p>
+<h3 id="sabias-que">Sabias que...?</h3>
+<ul>
+<li>O Home Assistant foi criado em 2013 por Paulus Schoutsen</li>
+<li>Hoje tem mais de <strong>20.000 contribuidores</strong> no GitHub</li>
+<li>Corre em mais de <strong>1 milhão de casas</strong> em todo o mundo</li>
+</ul>
+<hr />
+<p><strong>Próxima semana</strong>: Semana 2 — Instalar o Home Assistant OS no Raspberry Pi 4</p>
+    </div>
+
+    
+
+    <div class="share-section">
+        <span class="share-label">Partilhe este artigo:</span>
+        <div class="share-buttons">
+            <a href="https://wa.me/?text=https://casainteligentept.com/guides/o-que-e-home-assistant/" class="share-btn share-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://casainteligentept.com/guides/o-que-e-home-assistant/" class="share-btn share-facebook" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            <a href="https://pinterest.com/pin/create/button/?url=https://casainteligentept.com/guides/o-que-e-home-assistant/&description=Semana%201%20%E2%80%94%20O%20que%20%C3%A9%20o%20Home%20Assistant%3F" class="share-btn share-pinterest" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+            <a href="mailto:?subject=Semana%201%20%E2%80%94%20O%20que%20%C3%A9%20o%20Home%20Assistant%3F&body=https://casainteligentept.com/guides/o-que-e-home-assistant/" class="share-btn share-email" aria-label="Email">Email</a>
+        </div>
+    </div>
+
+    
+    <div class="disclosure">
+        <span class="disclosure-icon">i</span>
+        <p>Este artigo contém links de afiliados. Poderemos receber uma comissão por compras efetuadas através destes links, sem custo adicional para si.</p>
+    </div>
+    
+
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        
+        {
+          "@type": "Question",
+          "name": "Home Assistant \u00e9 gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, o Home Assistant \u00e9 open source e 100% gratuito. O \u00fanico custo \u00e9 o hardware (Raspberry Pi ~50-100\u20ac)."
+          }
+        },
+        
+        {
+          "@type": "Question",
+          "name": "Preciso de saber programar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N\u00e3o. As vers\u00f5es recentes t\u00eam interface visual para criar automa\u00e7\u00f5es sem c\u00f3digo. YAML ainda existe para configura\u00e7\u00f5es avan\u00e7adas, mas n\u00e3o \u00e9 obrigat\u00f3rio."
+          }
+        },
+        
+        {
+          "@type": "Question",
+          "name": "Funciona sem internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Essa \u00e9 a maior vantagem. Tudo funciona localmente na tua rede. Se a internet cair, a casa continua inteligente."
+          }
+        },
+        
+        {
+          "@type": "Question",
+          "name": "Quantos dispositivos posso ligar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Centenas. O HA tem integra\u00e7\u00e3o com mais de 2000 marcas. Podes ligar luzes, sensores, c\u00e2maras, tomadas, estores, e muito mais."
+          }
+        }
+        
+      ]
+    }
+    </script>
+
+    <div class="faq-section">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-list">
+            
+            <details class="faq-item">
+                <summary class="faq-question">Home Assistant é gratuito?</summary>
+                <div class="faq-answer">Sim, o Home Assistant é open source e 100% gratuito. O único custo é o hardware (Raspberry Pi ~50-100€).</div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">Preciso de saber programar?</summary>
+                <div class="faq-answer">Não. As versões recentes têm interface visual para criar automações sem código. YAML ainda existe para configurações avançadas, mas não é obrigatório.</div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">Funciona sem internet?</summary>
+                <div class="faq-answer">Sim! Essa é a maior vantagem. Tudo funciona localmente na tua rede. Se a internet cair, a casa continua inteligente.</div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">Quantos dispositivos posso ligar?</summary>
+                <div class="faq-answer">Centenas. O HA tem integração com mais de 2000 marcas. Podes ligar luzes, sensores, câmaras, tomadas, estores, e muito mais.</div>
+            </details>
+            
+        </div>
+    </div>
+    
+
+    <section class="comments-section">
+        <h2>Comentários</h2>
+        <script src="https://utteranc.es/client.js"
+                repo="cliffana/casainteligente"
+                issue-term="pathname"
+                label="comentario"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </section>
+
+    
+    <section class="related-section">
+        <h2>Artigos Relacionados</h2>
+        <div class="grid">
+            
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="/guides/home-assistant-vantagens-desvantagens/">Home Assistant — Vantagens, Desvantagens e Para Quem é Indicado</a></h3>
+                    <p class="card-meta">03/07/2026 · 7 min</p>
+                    <p>Análise completa do Home Assistant: vantagens, desvantagens, curva de aprendizagem, hardware necessário e se faz sentido para si. Guia honesto para principiantes e avançados.</p>
+                    <a href="/guides/home-assistant-vantagens-desvantagens/" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="/guides/melhores-aspiradores-robot-2026/">Melhores Aspiradores Robot 2026 — Qual o Melhor Relação Qualidade-Preço?</a></h3>
+                    <p class="card-meta">03/07/2026 · 5 min</p>
+                    <p>Guia completo dos melhores aspiradores robot de 2026. Comparamos Roborock, Xiaomi, Dreame e TP-Link para encontrar o melhor equilíbrio entre preço e funcionalidades.</p>
+                    <a href="/guides/melhores-aspiradores-robot-2026/" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            
+            <article class="card">
+                <div class="card-body">
+                    <h3><a href="/guides/3-vendas-amazon-afiliado/">5 Produtos Casa Inteligente Abaixo de 5€ — Compre Hoje e Comece</a></h3>
+                    <p class="card-meta">26/06/2026 · 2 min</p>
+                    <p>Os produtos smart home mais baratos da Amazon.es. Todos abaixo de 5€ — ideal para começar a sua casa inteligente sem gastar quase nada.</p>
+                    <a href="/guides/3-vendas-amazon-afiliado/" class="card-link">Ler artigo →</a>
+                </div>
+            </article>
+            
+        </div>
+    </section>
+    
+
+    <nav class="post-nav" aria-label="Anterior">
+        <a href="/comparacoes/electrodomesticos-inteligentes-cozinha-2026/" class="post-nav-link prev">← Eletrodomésticos Inteligentes para a Cozinha: O Guia Completo de 2026</a>
+        
+    </nav>
+</article>
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Casa Inteligente PT</h3>
+                <p>Guias, reviews e comparações de produtos para casa inteligente. Reviews honestas de Amazon Alexa, Google Home, Xiaomi, Aqara e mais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/category/guides/">Guias</a></li>
+                    <li><a href="/category/reviews/">Reviews</a></li>
+                    <li><a href="/category/comparacoes/">Comparações</a></li>
+                    <li><a href="/sobre/">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacidade/">Privacidade</a></li>
+                    <li><a href="/contacto/">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Idioma</h4>
+                <div class="lang-flags">
+                    
+                    <a href="https://casainteligentept.com/guides/o-que-e-home-assistant/" class="lang-flag active" title="Português" lang="pt">🇵🇹</a>
+                    
+                    <a href="https://casainteligentept.com/es/guides/o-que-e-home-assistant/" class="lang-flag " title="Español" lang="es">🇪🇸</a>
+                    
+                    <a href="https://casainteligentept.com/fr/guides/o-que-e-home-assistant/" class="lang-flag " title="Français" lang="fr">🇫🇷</a>
+                    
+                    <a href="https://casainteligentept.com/en/guides/o-que-e-home-assistant/" class="lang-flag " title="English" lang="en">🇬🇧</a>
+                    
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Receba as melhores promoções de casa inteligente no seu email.</p>
+                <form class="newsletter-form" action="mailto:" method="post" enctype="text/plain">
+                    <input type="email" name="email" placeholder="O seu email" required>
+                    <button type="submit" class="btn btn-small">Subscrever Newsletter</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Telegram</h4>
+                <p class="footer-disclosure">Ofertas diárias de produtos smart home. Junte-se ao nosso canal!</p>
+                <a href="https://t.me/+1L4pIX1kEBwyM2E0" class="btn btn-small" target="_blank" rel="noopener">📱 Entrar no Canal</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p class="footer-disclosure">Este site contém links de afiliados. Poderemos receber uma comissão por compras efetuadas através destes links, sem custo adicional para si.</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Casa Inteligente PT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+
+    <div class="fab-container">
+        <a href="https://t.me/+1L4pIX1kEBwyM2E0" class="fab fab-telegram" target="_blank" rel="noopener" title="Ofertas no Telegram">📱</a>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script>
+    // Progress bar
+    window.addEventListener('scroll',function(){var h=document.documentElement;var s=h.scrollTop;var t=h.scrollHeight-h.clientHeight;var p=(s/t)*100;document.getElementById('progressBar').style.width=p+'%'});
+
+    // Scroll reveal
+    var observer=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.15});
+    document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.card,.section-header,.hero,.price-home-card,.telegram-banner,.stat-box').forEach(function(e){e.classList.add('reveal');observer.observe(e)})});
+
+    // Toast
+    function toast(msg,d){var c=document.getElementById('toastContainer');var t=document.createElement('div');t.className='toast';t.textContent=msg;c.appendChild(t);setTimeout(function(){t.classList.add('removing');setTimeout(function(){t.remove()},400)},d||3000)}
+    setTimeout(function(){toast('Bem-vindo! Boa leitura e diverte-te!',5000)},1500);
+    </script>
+    
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "name": "Casa Inteligente PT",
+    "url": "https://casainteligentept.com",
+    "description": "O cérebro da tua Casa Inteligente. Descobre o que é o Home Assistant, porque deves escolhê-lo e como vai transformar a tua casa num ecossistema inteligente, privado e 100% teu.",
+    "headline": "Semana 1 — O que é o Home Assistant?",
+    "datePublished": "2026-07-21",
+    "author": {
+        "@type": "Person",
+        "name": "Equipa Casa Inteligente PT"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Casa Inteligente PT"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://casainteligentept.com/guides/o-que-e-home-assistant/"
+    }
+}
+    </script>
+</body>
+</html>

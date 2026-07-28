@@ -2,31 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Casa Inteligente PT</title>
-    <link>https://cliffana.github.io/casainteligente</link>
+    <link>https://casainteligentept.com</link>
     <description>Guias, reviews e comparações de produtos para casa inteligente. Reviews honestas de Amazon Alexa, Google Home, Xiaomi, Aqara e mais.</description>
     <language>pt-PT</language>
-    <lastBuildDate>Mon, 27 Jul 2026 09:59:47 -0000</lastBuildDate>
-    <atom:link href="https://cliffana.github.io/casainteligente/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 24 Jul 2026 11:07:55 -0000</lastBuildDate>
+    <atom:link href="https://casainteligentept.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Semana 1 — O que é o Home Assistant?</title>
+      <link>https://casainteligentept.com/guides/o-que-e-home-assistant/</link>
+      <description>O cérebro da tua Casa Inteligente. Descobre o que é o Home Assistant, porque deves escolhê-lo e como vai transformar a tua casa num ecossistema inteligente, privado e 100% teu.</description>
+      <pubDate>Mon, 20 Jul 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/o-que-e-home-assistant/</guid>
+    </item>
+    <item>
+      <title>Eletrodomésticos Inteligentes para a Cozinha: O Guia Completo de 2026</title>
+      <link>https://casainteligentept.com/comparacoes/electrodomesticos-inteligentes-cozinha-2026/</link>
+      <description>Guia completo dos melhores eletrodomésticos inteligentes para cozinha em 2026. De chaleiras a air fryers, descubra quais valem a pena e quanto custam.</description>
+      <pubDate>Wed, 08 Jul 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/electrodomesticos-inteligentes-cozinha-2026/</guid>
+    </item>
+    <item>
+      <title>Routers WiFi 7 — Operadora vs Comprar o Seu. Vale a Pena?</title>
+      <link>https://casainteligentept.com/comparacoes/routers-wifi-7-operadora-vs-proprio/</link>
+      <description>Comparacao completa entre routers de operadora (MEO, Vodafone, Nos) e routers proprios WiFi 7. Performance, funcionalidades e qual escolher em 2026 sem gastar muito.</description>
+      <pubDate>Fri, 03 Jul 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/routers-wifi-7-operadora-vs-proprio/</guid>
+    </item>
+    <item>
+      <title>Fechaduras Inteligentes — Vantagens, Desvantagens e Vale a Pena?</title>
+      <link>https://casainteligentept.com/comparacoes/fechaduras-inteligentes-vantagens-desvantagens/</link>
+      <description>Análise completa das vantagens e desvantagens das fechaduras inteligentes. Segurança, conveniência, instalação, preços e riscos — tudo o que precisa de saber antes de comprar.</description>
+      <pubDate>Thu, 02 Jul 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/fechaduras-inteligentes-vantagens-desvantagens/</guid>
+    </item>
+    <item>
+      <title>Home Assistant — Vantagens, Desvantagens e Para Quem é Indicado</title>
+      <link>https://casainteligentept.com/guides/home-assistant-vantagens-desvantagens/</link>
+      <description>Análise completa do Home Assistant: vantagens, desvantagens, curva de aprendizagem, hardware necessário e se faz sentido para si. Guia honesto para principiantes e avançados.</description>
+      <pubDate>Thu, 02 Jul 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/home-assistant-vantagens-desvantagens/</guid>
+    </item>
+    <item>
+      <title>Melhores Aspiradores Robot 2026 — Qual o Melhor Relação Qualidade-Preço?</title>
+      <link>https://casainteligentept.com/guides/melhores-aspiradores-robot-2026/</link>
+      <description>Guia completo dos melhores aspiradores robot de 2026. Comparamos Roborock, Xiaomi, Dreame e TP-Link para encontrar o melhor equilíbrio entre preço e funcionalidades.</description>
+      <pubDate>Thu, 02 Jul 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/melhores-aspiradores-robot-2026/</guid>
+    </item>
+    <item>
+      <title>5 Produtos Casa Inteligente Abaixo de 5€ — Compre Hoje e Comece</title>
+      <link>https://casainteligentept.com/guides/3-vendas-amazon-afiliado/</link>
+      <description>Os produtos smart home mais baratos da Amazon.es. Todos abaixo de 5€ — ideal para começar a sua casa inteligente sem gastar quase nada.</description>
+      <pubDate>Thu, 25 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/3-vendas-amazon-afiliado/</guid>
+    </item>
+    <item>
+      <title>Casa Inteligente por Menos de 100€ — Guia Low-Cost 2026</title>
+      <link>https://casainteligentept.com/guides/casa-inteligente-100-euros-low-cost/</link>
+      <description>Monte a sua casa inteligente com menos de 100€. Guia prático com orçamento detalhado: lâmpadas, sensores, tomadas e automações passo a passo.</description>
+      <pubDate>Tue, 23 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/casa-inteligente-100-euros-low-cost/</guid>
+    </item>
+    <item>
+      <title>Top 5 Produtos Casa Inteligente por Menos de 10€ — Guia 2026</title>
+      <link>https://casainteligentept.com/guides/top-5-menos-10-euros/</link>
+      <description>Os melhores produtos smart home por menos de 10€. Tomadas, lâmpadas, sensores e interruptores — automatize a sua casa com pouco dinheiro.</description>
+      <pubDate>Tue, 23 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/top-5-menos-10-euros/</guid>
+    </item>
+    <item>
+      <title>Como Criar Rotinas de Automação em Casa — Guia Passo a Passo 2026</title>
+      <link>https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/</link>
+      <description>Aprenda a criar automações inteligentes em casa. Rotinas com Alexa, Google Home e sensores — exemplos práticos para começar hoje.</description>
+      <pubDate>Mon, 22 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/rotinas-automacao-casa-inteligente/</guid>
+    </item>
+    <item>
+      <title>Top 10 Produtos AliExpress para Casa Inteligente — Guia 2026</title>
+      <link>https://casainteligentept.com/guides/top-10-aliexpress-casa-inteligente/</link>
+      <description>Seleção dos melhores produtos para casa inteligente no AliExpress. Sensores Aqara, tomadas Sonoff, lâmpadas Yeelight e mais — com links de afiliado e preços.</description>
+      <pubDate>Mon, 22 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/top-10-aliexpress-casa-inteligente/</guid>
+    </item>
+    <item>
+      <title>Melhores Tomadas Inteligentes 2026 — TP-Link Tapo vs Amazon vs Shelly</title>
+      <link>https://casainteligentept.com/comparacoes/melhores-tomadas-inteligentes-2026/</link>
+      <description>Comparamos as 3 tomadas inteligentes WiFi mais populares. Tapo P115, Amazon Smart Plug e Shelly Plug S — preço, funcionalidades e consumo energético.</description>
+      <pubDate>Sun, 21 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/melhores-tomadas-inteligentes-2026/</guid>
+    </item>
+    <item>
+      <title>Philips Hue vs TP-Link Tapo L530E — Qual a Melhor Lâmpada Inteligente em 2026?</title>
+      <link>https://casainteligentept.com/comparacoes/philips-hue-vs-tapo-l530e/</link>
+      <description>Comparamos as duas lâmpadas inteligentes mais populares. Philips Hue (starter kit) vs TP-Link Tapo L530E — preço, qualidade de luz, app e compatibilidade.</description>
+      <pubDate>Sun, 21 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/philips-hue-vs-tapo-l530e/</guid>
+    </item>
+    <item>
+      <title>Sensores de Temperatura e Humidade para Casa Inteligente — Qual o Melhor?</title>
+      <link>https://casainteligentept.com/comparacoes/sensores-temperatura-humidade/</link>
+      <description>Guia completo de sensores de temperatura e humidade inteligentes. Comparamos Aqara, SwitchBot e Govee — precisão, preço, compatibilidade e autonomia.</description>
+      <pubDate>Sun, 21 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/sensores-temperatura-humidade/</guid>
+    </item>
     <item>
       <title>Xiaomi vs Tuya: Qual o Melhor Ecossistema para Casa Inteligente?</title>
-      <link>https://cliffana.github.io/casainteligente/comparacoes/comparacao-xiaomi-vs-tuya/</link>
+      <link>https://casainteligentept.com/comparacoes/comparacao-xiaomi-vs-tuya/</link>
       <description>Xiaomi Aqara ou Tuya? Comparamos preço, compatibilidade, qualidade e facilidade de uso dos dois ecossistemas.</description>
-      <pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate>
-      <guid>https://cliffana.github.io/casainteligente/comparacoes/comparacao-xiaomi-vs-tuya/</guid>
+      <pubDate>Sat, 20 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/comparacoes/comparacao-xiaomi-vs-tuya/</guid>
     </item>
     <item>
       <title>Guia Completo de Casa Inteligente para Iniciantes 2026</title>
-      <link>https://cliffana.github.io/casainteligente/guides/guia-iniciante-casa-inteligente/</link>
+      <link>https://casainteligentept.com/guides/guia-iniciante-casa-inteligente/</link>
       <description>Tudo o que precisa para começar a automatizar a sua casa. Dos dispositivos essenciais à configuração passo a passo.</description>
-      <pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate>
-      <guid>https://cliffana.github.io/casainteligente/guides/guia-iniciante-casa-inteligente/</guid>
+      <pubDate>Sat, 20 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/guides/guia-iniciante-casa-inteligente/</guid>
     </item>
     <item>
       <title>Melhores Colunas Inteligentes 2026: Alexa vs Google Nest vs HomePod</title>
-      <link>https://cliffana.github.io/casainteligente/reviews/melhores-colunas-inteligentes-2026/</link>
+      <link>https://casainteligentept.com/reviews/melhores-colunas-inteligentes-2026/</link>
       <description>Comparámos as melhores colunas inteligentes do mercado. Qual a melhor para si? Descubra neste review completo.</description>
-      <pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate>
-      <guid>https://cliffana.github.io/casainteligente/reviews/melhores-colunas-inteligentes-2026/</guid>
+      <pubDate>Sat, 20 Jun 2026 23:00:00 -0000</pubDate>
+      <guid>https://casainteligentept.com/reviews/melhores-colunas-inteligentes-2026/</guid>
     </item>
   </channel>
 </rss>
